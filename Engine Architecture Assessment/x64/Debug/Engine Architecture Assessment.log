@@ -1,4 +1,6 @@
 ﻿  Game.cpp
+  GameObject.cpp
   main.cpp
   Generating Code...
+C:\Users\Matth\Documents\YEAR 2\EngineArch\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(41): warning C4715: 'GameObject::ObjectTypeToString': not all control paths return a value
   Engine Architecture Assessment.vcxproj -> C:\Users\Matth\Documents\YEAR 2\EngineArch\EngineArchCollisionSystem\Engine Architecture Assessment\x64\Debug\Engine Architecture Assessment.exe
