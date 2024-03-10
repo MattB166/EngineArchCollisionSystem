@@ -1,12 +1,15 @@
 #pragma once
-#include <iostream> 
+#include <iostream>
 #include <list>
+#include "SDL_image.h"
 #include "GameObject.h"
 class Game
 {
 public:
 	void Run();
-	void Initialise();
+	bool Initialise();
+	void CleanUp();
+	SDL_Texture* LoadTexture(const char* filename);
 
 private:
 	std::list<GameObject*> objects;
