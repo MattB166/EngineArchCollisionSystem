@@ -17,7 +17,8 @@ GameObject::GameObject(SDL_Texture* FirstTexture, SDL_Texture* SecondTexture, SD
 
 void GameObject::Draw(SDL_Renderer* renderer)
 {
-
+	///rendercopy here 
+	
 }
 
 void GameObject::Update()

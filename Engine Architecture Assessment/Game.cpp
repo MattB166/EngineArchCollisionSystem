@@ -9,7 +9,7 @@ void Game::Run()
 	}
 	//load textures here and assign them to the shapes 
 	
-	SpawnObjects(Circle,3);
+	SpawnObjects(Circle, 3);
 	
 	isRunning = true;
 	while (isRunning)
