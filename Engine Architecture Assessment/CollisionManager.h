@@ -13,3 +13,4 @@ private:
 	static CollisionManager* _instance;
 };
 
+////also need a way to assign colliders to all generated objects 

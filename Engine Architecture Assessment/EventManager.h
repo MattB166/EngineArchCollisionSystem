@@ -1,9 +1,12 @@
 #pragma once
+#include "GameObject.h"
 #include <queue> ///class to queue the events 
-struct CollisionEvent
+#include <list>
+struct CollisionEvent ///might actually be needed in collision manager instead of this 
 {
 	//listener
 	//event 
+	///which objects collided 
 };
 class EventManager
 {
@@ -17,8 +20,12 @@ private:
 	/// maybe something like? 
 	std::queue<CollisionEvent> EventQueue;
 	///also need a list of registered listeners 
+	void AddEvent(CollisionEvent event);
 	void DispatchEvents();
 	///might need reference to listeners here too. struct of some sort 
+	//like this?
+	std::list<GameObject> listeners;
+	
 };
 
 	
