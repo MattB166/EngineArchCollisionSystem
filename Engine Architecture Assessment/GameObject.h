@@ -15,15 +15,17 @@ public:
 	GameObject(ObjectType type);
 	GameObject(SDL_Texture* FirstTexture, SDL_Texture* SecondTexture, SDL_Renderer* renderer, ObjectType type);
 	~GameObject();
-	void Draw(SDL_Renderer* renderer);
-	void Update(SDL_Renderer* renderer);
+	void Draw();
+	void Update();
 	static std::string ObjectTypeToString(ObjectType type);
 	//void Spawn(ObjectType type);
 
 
 private:
 	void ChangeTexture();
-	void SetObjectPosition(int x, int y);
+	void SetObjectPosition();
+	void RandomMovement();
+	///need movement and need to work out drawing circles with textures too 
 	std::string name;
 	ObjectType Object;
 	Vector2 pos;
@@ -35,4 +37,3 @@ private:
 	SDL_Texture* Maintexture = nullptr;
 	SDL_Texture* SecondaryTexture = nullptr;
 };
-

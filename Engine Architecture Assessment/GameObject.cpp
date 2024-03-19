@@ -1,10 +1,11 @@
 #include "GameObject.h"
 
-
 GameObject::GameObject(ObjectType type)
 {
 	Object = type;
 	std::cout << "\nSpawned a " << GameObject::ObjectTypeToString(type)<< "\n";
+	
+
 }
 
 GameObject::GameObject(SDL_Texture* FirstTexture, SDL_Texture* SecondTexture, SDL_Renderer* renderer, ObjectType type)
@@ -13,7 +14,7 @@ GameObject::GameObject(SDL_Texture* FirstTexture, SDL_Texture* SecondTexture, SD
 	SecondaryTexture = SecondTexture;
 	Renderer = renderer; 
 	Object = type;
-	SetObjectPosition(100, 100);
+	SetObjectPosition();
 	
 }
 
@@ -23,21 +24,29 @@ GameObject::~GameObject()
 	SDL_DestroyTexture(SecondaryTexture);
 }
 
-void GameObject::Draw(SDL_Renderer* renderer)
+void GameObject::Draw()
 {
-	///rendercopy here 
-	SDL_Rect dstRect{ pos.x,pos.y,width,height };
-	SDL_RendererFlip flip = SDL_FLIP_NONE;
-	//SDL_SetRenderTarget(renderer, Maintexture);
-	SDL_RenderCopyEx(renderer, Maintexture, NULL, &dstRect, rotation, NULL, flip);
-	std::cout << "Drawing object" << std::endl; 
+	if (Object == Circle)
+	{
+		std::cout << "Cannot currently draw a circle. " << std::endl;
+	}
+	else if (Object == Square)
+	{
+		Vector2 ObjectCentre = pos + Vector2(width / 2, height / 2);
+
+		SDL_Rect dstRect{ ObjectCentre.x,ObjectCentre.y,width,height };
+		SDL_RendererFlip flip = SDL_FLIP_NONE;
+
+		SDL_RenderCopyEx(Game::instance()->GetRenderer(), Maintexture, NULL, &dstRect, rotation, NULL, flip);
+	}
+	
+	 
 	
 }
 
-void GameObject::Update(SDL_Renderer* renderer)
+void GameObject::Update()
 {
-	//std::cout << Object << "is updating" << std::endl; 
-	Draw(renderer);
+	Draw();
 }
 
 std::string GameObject::ObjectTypeToString(ObjectType type)
@@ -55,25 +64,26 @@ std::string GameObject::ObjectTypeToString(ObjectType type)
 	}
 }
 
-//void GameObject::Spawn(ObjectType type)
-//{
-//	if (type == Circle)
-//	{
-//		std::cout << "Spawned Circle" << std::endl; 
-//	}
-//	else if (type == Square)
-//	{
-//		std::cout << "Spawned Square" << std::endl;
-//	}
-//}
-
 void GameObject::ChangeTexture()
 {
 	
 }
 
-void GameObject::SetObjectPosition(int x, int y)
+void GameObject::SetObjectPosition()
 {
-	pos.x = x;
-	pos.y = y;
+	srand(time(NULL));
+
+	int randX = rand() % 800 + 1;
+	int randY = rand() % 600 + 1;
+
+	pos.x = randX;
+	pos.y = randY; 
+
+	std::cout << "X Position is: " << randX << "And Y Position is: " << randY << std::endl; 
+}
+
+void GameObject::RandomMovement()
+{
+	/// random vector within screen and set it as a destination vector. 
+	
 }

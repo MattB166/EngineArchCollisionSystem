@@ -9,6 +9,8 @@ public:
 	
 	static bool CircleCollision(/*radii and base x and y's set here*/);
 
+	static bool BoundsCollision(); ////checking whether objects bouncing off walls 
+
 private:
 	static CollisionManager* _instance;
 };

@@ -1,8 +1,11 @@
 #pragma once
 #include <iostream>
+#include "SDL.h"
 #include <list>
 #include "SDL_image.h"
 #include "GameObject.h"
+class GameObject;
+enum ObjectType;
 class Game
 {
 public:
@@ -21,6 +24,8 @@ private:
 	void Update();
 	void SpawnObjects(ObjectType type, int amount, SDL_Renderer* renderer, SDL_Texture* texture);
 	bool isRunning;
+	static float WorldX;
+	static float WorldY;
 	// pointer reference to event manager/handler 
 };
 

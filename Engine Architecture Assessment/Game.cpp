@@ -1,4 +1,7 @@
 #include "Game.h"
+Game* Game::_instance = nullptr;
+float Game::WorldX = 800;
+float Game::WorldY = 600;
 
 void Game::Run()
 {
@@ -12,6 +15,7 @@ void Game::Run()
 	SDL_Texture* MagicTexture = SDL_CreateTexture(g_sdlRenderer, SDL_PIXELFORMAT_ARGB32, SDL_TEXTUREACCESS_TARGET, 64, 64);
 	
 	SpawnObjects(Square, 1,g_sdlRenderer, MagicTexture);
+	//SpawnObjects(Circle, 2, g_sdlRenderer, MagicTexture);
 	//SDL_SetRenderTarget(g_sdlRenderer, MagicTexture);
 	
 	
@@ -91,7 +95,7 @@ void Game::Update()
 
 	for (std::list<GameObject*>::const_iterator iter = this->objects.begin(), end = this->objects.end();iter!=end;++iter)
 	{
-		(*iter)->Update(g_sdlRenderer);
+		(*iter)->Update();
 	}
 
 	
