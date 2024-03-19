@@ -13,17 +13,31 @@ GameObject::GameObject(SDL_Texture* FirstTexture, SDL_Texture* SecondTexture, SD
 	SecondaryTexture = SecondTexture;
 	Renderer = renderer; 
 	Object = type;
+	SetObjectPosition(100, 100);
+	
+}
+
+GameObject::~GameObject()
+{
+	SDL_DestroyTexture(Maintexture);
+	SDL_DestroyTexture(SecondaryTexture);
 }
 
 void GameObject::Draw(SDL_Renderer* renderer)
 {
 	///rendercopy here 
+	SDL_Rect dstRect{ pos.x,pos.y,width,height };
+	SDL_RendererFlip flip = SDL_FLIP_NONE;
+	//SDL_SetRenderTarget(renderer, Maintexture);
+	SDL_RenderCopyEx(renderer, Maintexture, NULL, &dstRect, rotation, NULL, flip);
+	std::cout << "Drawing object" << std::endl; 
 	
 }
 
-void GameObject::Update()
+void GameObject::Update(SDL_Renderer* renderer)
 {
-	std::cout << Object << "is updating" << std::endl; 
+	//std::cout << Object << "is updating" << std::endl; 
+	Draw(renderer);
 }
 
 std::string GameObject::ObjectTypeToString(ObjectType type)
@@ -56,4 +70,10 @@ std::string GameObject::ObjectTypeToString(ObjectType type)
 void GameObject::ChangeTexture()
 {
 	
+}
+
+void GameObject::SetObjectPosition(int x, int y)
+{
+	pos.x = x;
+	pos.y = y;
 }

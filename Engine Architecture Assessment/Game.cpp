@@ -7,15 +7,21 @@ void Game::Run()
 		std::cout << "Application failed to initialise. Quitting... " << std::endl;
 		return;
 	}
-	//load textures here and assign them to the shapes 
 	
-	SpawnObjects(Circle, 3);
+	//load textures here and assign them to the shapes 
+	SDL_Texture* MagicTexture = SDL_CreateTexture(g_sdlRenderer, SDL_PIXELFORMAT_ARGB32, SDL_TEXTUREACCESS_TARGET, 64, 64);
+	
+	SpawnObjects(Square, 1,g_sdlRenderer, MagicTexture);
+	//SDL_SetRenderTarget(g_sdlRenderer, MagicTexture);
+	
 	
 	isRunning = true;
 	while (isRunning)
 	{
+		SDL_SetRenderDrawColor(g_sdlRenderer, 19, 47, 209, 255);
+		SDL_RenderClear(g_sdlRenderer);
 		Update(); 
-		
+		SDL_RenderPresent(g_sdlRenderer);
 	}
 	CleanUp();
 }
@@ -39,6 +45,7 @@ bool Game::Initialise()
 		return true;
 
 	}
+
 	return false;
 }
 
@@ -47,6 +54,11 @@ void Game::CleanUp()
 	SDL_DestroyRenderer(g_sdlRenderer);
 	SDL_DestroyWindow(g_sdlWindow);
 	SDL_Quit();
+}
+
+SDL_Renderer* Game::GetRenderer()
+{
+	return g_sdlRenderer;
 }
 
 SDL_Texture* Game::LoadTexture(const char* filename)
@@ -74,18 +86,24 @@ SDL_Texture* Game::LoadTexture(const char* filename)
 
 void Game::Update()
 {
-	//std::cout << "Running" << std::endl; 
-	///gameobject update
-	//collision update 
+	std::list<GameObject*>::iterator iter;
+	iter = this->objects.begin();
+
+	for (std::list<GameObject*>::const_iterator iter = this->objects.begin(), end = this->objects.end();iter!=end;++iter)
+	{
+		(*iter)->Update(g_sdlRenderer);
+	}
+
+	
 	
 }
 
-void Game::SpawnObjects(ObjectType type, int amount)
+void Game::SpawnObjects(ObjectType type, int amount,SDL_Renderer* renderer, SDL_Texture* texture)
 {
 	///run through and spawn some squares and circles 
 	for (int i = 0; i < amount; ++i)
 	{
-		GameObject* obj = new GameObject(type);
+		GameObject* obj = new GameObject(texture,texture,renderer,type);
 		objects.push_back(obj);
 	}
 	std::cout << "Spawned " << amount << " of " << GameObject::ObjectTypeToString(type);
