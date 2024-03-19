@@ -1,5 +1,5 @@
 #pragma once
-class CollisionManager  ///class to create collision events 
+class CollisionManager   
 {
 
 public:
@@ -13,6 +13,7 @@ public:
 
 private:
 	static CollisionManager* _instance;
+	//list of colliders 
 };
 
 ////also need a way to assign colliders to all generated objects 

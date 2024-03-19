@@ -3,6 +3,7 @@
 GameObject::GameObject(ObjectType type)
 {
 	Object = type;
+	
 	std::cout << "\nSpawned a " << GameObject::ObjectTypeToString(type)<< "\n";
 	
 
@@ -15,7 +16,7 @@ GameObject::GameObject(SDL_Texture* FirstTexture, SDL_Texture* SecondTexture, SD
 	Renderer = renderer; 
 	Object = type;
 	SetObjectPosition();
-	
+	RegisterToEvents();
 }
 
 GameObject::~GameObject()
@@ -64,6 +65,16 @@ std::string GameObject::ObjectTypeToString(ObjectType type)
 	}
 }
 
+std::string GameObject::getName()
+{
+	return name;
+}
+
+void GameObject::RegisterToEvents()
+{
+	EventManager::instance()->RegisterListener(this);
+}
+
 void GameObject::ChangeTexture()
 {
 	
@@ -71,7 +82,7 @@ void GameObject::ChangeTexture()
 
 void GameObject::SetObjectPosition()
 {
-	srand(time(NULL));
+	
 
 	int randX = rand() % 800 + 1;
 	int randY = rand() % 600 + 1;

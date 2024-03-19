@@ -1,14 +1,21 @@
 #include "EventManager.h"
+EventManager* EventManager::_instance = nullptr;
 
-void EventManager::AddEvent(CollisionEvent event)
+void EventManager::RegisterListener(GameObject* listener)
 {
-	EventQueue.push(event);
+	listeners.push_back(listener);
+	std::cout << "Added: " << listener->getName() << " to listeners list" << std::endl; 
 }
 
-void EventManager::DispatchEvents()
-{
-	while (!EventQueue.empty())
-	{
-		EventQueue.pop(); 
-	}
-}
+//void EventManager::AddEvent(CollisionEvent event)
+//{
+//	EventQueue.push(event);
+//}
+//
+//void EventManager::DispatchEvents()
+//{
+//	while (!EventQueue.empty())
+//	{
+//		EventQueue.pop(); 
+//	}
+//}

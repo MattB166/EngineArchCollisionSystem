@@ -4,6 +4,7 @@
 #include <string>
 #include "Game.h"
 #include "Vector2.h"
+#include "EventManager.h"
 enum ObjectType
 {
 	Square,
@@ -18,8 +19,9 @@ public:
 	void Draw();
 	void Update();
 	static std::string ObjectTypeToString(ObjectType type);
+	std::string getName();
 	//void Spawn(ObjectType type);
-
+	void RegisterToEvents();
 
 private:
 	void ChangeTexture();

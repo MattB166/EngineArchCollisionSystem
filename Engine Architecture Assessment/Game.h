@@ -18,7 +18,7 @@ public:
 
 private:
 	static Game* _instance;
-	std::list<GameObject*> objects;
+	std::list<GameObject*> objects;  ///iterate through and add colliders 
 	SDL_Window* g_sdlWindow;
 	SDL_Renderer* g_sdlRenderer;
 	void Update();
@@ -27,6 +27,8 @@ private:
 	static float WorldX;
 	static float WorldY;
 	// pointer reference to event manager/handler 
+
+	
 };
 
 ///make a singleton and have a getRenderer function rather than constantly passing by parameter 

@@ -13,6 +13,7 @@ bool Initialise()
 }
 int main(int argc, char* argv[])
 {
+	srand(time(NULL));
 
 	if (Initialise())
 	{

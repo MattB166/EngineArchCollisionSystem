@@ -14,10 +14,9 @@ void Game::Run()
 	//load textures here and assign them to the shapes 
 	SDL_Texture* MagicTexture = SDL_CreateTexture(g_sdlRenderer, SDL_PIXELFORMAT_ARGB32, SDL_TEXTUREACCESS_TARGET, 64, 64);
 	
-	SpawnObjects(Square, 1,g_sdlRenderer, MagicTexture);
+	SpawnObjects(Square, 2,g_sdlRenderer, MagicTexture);
 	//SpawnObjects(Circle, 2, g_sdlRenderer, MagicTexture);
 	//SDL_SetRenderTarget(g_sdlRenderer, MagicTexture);
-	
 	
 	isRunning = true;
 	while (isRunning)
