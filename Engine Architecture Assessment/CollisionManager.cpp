@@ -14,3 +14,7 @@ bool CollisionManager::BoundsCollision()
 {
 	return false;
 }
+
+void CollisionManager::CreateCollider()
+{
+}

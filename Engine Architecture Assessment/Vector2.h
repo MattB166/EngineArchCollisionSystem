@@ -16,7 +16,8 @@ public:
 	static const Vector2 Right;
 	static const Vector2 Up;
 	static const Vector2 Zero;
-	static Vector2 MoveTowards(Vector2 current, Vector2 target, float maxDistDelta);
+	static Vector2 MoveTowards(Vector2 current, Vector2 target, float maxDistDelta);	
+	static float Distance(const Vector2& a, const Vector2& b);
 	//float Magnitude; 
 	Vector2();
 	Vector2(float x, float y);

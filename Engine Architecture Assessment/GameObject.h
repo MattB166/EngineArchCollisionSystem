@@ -45,9 +45,11 @@ private:
 	std::string name;
 	ObjectType Object;
 	Vector2 pos;
+	float speed = 5;
 	float width = 40;
 	float height = 40;
 	float rotation = 0;
+	bool destinationReached;
 	SDL_Renderer* Renderer = nullptr;
 	SDL_Texture* texture = nullptr;
 	SDL_Texture* Maintexture = nullptr;

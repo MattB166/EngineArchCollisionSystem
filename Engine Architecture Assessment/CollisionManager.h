@@ -10,10 +10,12 @@ public:
 	static bool CircleCollision(/*radii and base x and y's set here*/);
 
 	static bool BoundsCollision(); ////checking whether objects bouncing off walls 
+	void CreateCollider();
 
 private:
 	static CollisionManager* _instance;
-	//list of colliders 
+	//list of colliders or gameobjects 
+	///way to generate colliders from here inside each object. so also need a collider class 
 };
 
 ////also need a way to assign colliders to all generated objects 

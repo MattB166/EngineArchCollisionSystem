@@ -52,6 +52,13 @@ Vector2 Vector2::MoveTowards(Vector2 current, Vector2 target, float maxDistDelta
 	}
 }
 
+float Vector2::Distance(const Vector2& a, const Vector2& b)
+{
+	float dx = b.x - a.x;
+	float dy = b.y - a.y;
+	return std::sqrt(dx * dx + dy * dy);
+}
+
 Vector2 Vector2::operator/(float scalar) const
 {
 	if (scalar != 0)
