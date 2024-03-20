@@ -15,6 +15,8 @@ public:
 	void CleanUp();
 	SDL_Renderer* GetRenderer();
 	SDL_Texture* LoadTexture(const char* filename);
+	static float WorldX;
+	static float WorldY;
 
 private:
 	static Game* _instance;
@@ -24,8 +26,7 @@ private:
 	void Update();
 	void SpawnObjects(ObjectType type, int amount, SDL_Renderer* renderer, SDL_Texture* texture);
 	bool isRunning;
-	static float WorldX;
-	static float WorldY;
+	
 	// pointer reference to event manager/handler 
 
 	

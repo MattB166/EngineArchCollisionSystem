@@ -106,7 +106,8 @@ void Game::SpawnObjects(ObjectType type, int amount,SDL_Renderer* renderer, SDL_
 	///run through and spawn some squares and circles 
 	for (int i = 0; i < amount; ++i)
 	{
-		GameObject* obj = new GameObject(texture,texture,renderer,type);
+		Parameters param{ texture,texture,renderer,type };
+		GameObject* obj = new GameObject(param);
 		objects.push_back(obj);
 	}
 	std::cout << "Spawned " << amount << " of " << GameObject::ObjectTypeToString(type);

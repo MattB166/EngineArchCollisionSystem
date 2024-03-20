@@ -5,23 +5,37 @@
 #include "Game.h"
 #include "Vector2.h"
 #include "EventManager.h"
+#include "IObserver.h"
 enum ObjectType
 {
 	Square,
 	Circle
 };
-class GameObject
+struct Parameters 
+{
+	SDL_Texture* texture;
+	SDL_Texture* SecondTexture;
+	SDL_Renderer* renderer;
+	ObjectType type;
+
+
+};
+struct ObjectRect
+{
+	float x, y, w, h;
+};
+class GameObject:public IObserver
 {
 public:
 	GameObject(ObjectType type);
-	GameObject(SDL_Texture* FirstTexture, SDL_Texture* SecondTexture, SDL_Renderer* renderer, ObjectType type);
+	GameObject(Parameters params);
 	~GameObject();
 	void Draw();
 	void Update();
 	static std::string ObjectTypeToString(ObjectType type);
 	std::string getName();
 	//void Spawn(ObjectType type);
-	void RegisterToEvents();
+	void Observe() override;
 
 private:
 	void ChangeTexture();

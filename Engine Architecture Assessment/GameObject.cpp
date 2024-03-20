@@ -9,14 +9,16 @@ GameObject::GameObject(ObjectType type)
 
 }
 
-GameObject::GameObject(SDL_Texture* FirstTexture, SDL_Texture* SecondTexture, SDL_Renderer* renderer, ObjectType type)
+GameObject::GameObject(Parameters params)
 {
-	Maintexture = FirstTexture; 
-	SecondaryTexture = SecondTexture;
-	Renderer = renderer; 
-	Object = type;
+	Maintexture = params.texture; 
+	SecondaryTexture = params.SecondTexture;
+	Renderer = params.renderer; 
+	Object = params.type;
 	SetObjectPosition();
-	RegisterToEvents();
+	//RegisterToEvents();
+	Observe();
+	///add collider to collision class 
 }
 
 GameObject::~GameObject()
@@ -70,7 +72,7 @@ std::string GameObject::getName()
 	return name;
 }
 
-void GameObject::RegisterToEvents()
+void GameObject::Observe()
 {
 	EventManager::instance()->RegisterListener(this);
 }
@@ -83,7 +85,7 @@ void GameObject::ChangeTexture()
 void GameObject::SetObjectPosition()
 {
 	
-
+	///check to world bounds 
 	int randX = rand() % 800 + 1;
 	int randY = rand() % 600 + 1;
 
@@ -96,5 +98,10 @@ void GameObject::SetObjectPosition()
 void GameObject::RandomMovement()
 {
 	/// random vector within screen and set it as a destination vector. 
+	int randX = rand() % 800 + 1;
+	int randY = rand() % 600 + 1;
+	Vector2 movePos = Vector2(randX, randY);
+
+	
 	
 }
