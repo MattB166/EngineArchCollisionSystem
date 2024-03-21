@@ -10,15 +10,14 @@ void Game::Run()
 		std::cout << "Application failed to initialise. Quitting... " << std::endl;
 		return;
 	}
-	
 	//load textures here and assign them to the shapes 
 	SDL_Texture* MagicTexture = SDL_CreateTexture(g_sdlRenderer, SDL_PIXELFORMAT_ARGB32, SDL_TEXTUREACCESS_TARGET, 64, 64);
 	
-	SpawnObjects(Square, 1,g_sdlRenderer, MagicTexture);
+	SpawnObjects(Square, 3,g_sdlRenderer, MagicTexture);
 	//SpawnObjects(Circle, 2, g_sdlRenderer, MagicTexture);
 	//SDL_SetRenderTarget(g_sdlRenderer, MagicTexture);
-	
 	isRunning = true;
+	
 	while (isRunning)
 	{
 		SDL_SetRenderDrawColor(g_sdlRenderer, 19, 47, 209, 255);
@@ -89,6 +88,7 @@ SDL_Texture* Game::LoadTexture(const char* filename)
 
 void Game::Update()
 {
+	Time::instance()->UpdateDeltaTime();
 	std::list<GameObject*>::iterator iter;
 	iter = this->objects.begin();
 

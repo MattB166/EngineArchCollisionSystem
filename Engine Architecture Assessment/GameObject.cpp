@@ -6,7 +6,7 @@ GameObject::GameObject(ObjectType type)
 	
 	std::cout << "\nSpawned a " << GameObject::ObjectTypeToString(type)<< "\n";
 	
-
+	
 }
 
 GameObject::GameObject(Parameters params)
@@ -50,7 +50,7 @@ void GameObject::Draw()
 void GameObject::Update()
 {
 	Draw();
-	RandomMovement(); ///works but its absolutely mental atm. need speed and delta time 
+	RandomMovement(Time::instance()->GetDeltaTime()); ///works but its absolutely mental atm. need speed and delta time 
 }
 
 std::string GameObject::ObjectTypeToString(ObjectType type)
@@ -96,28 +96,38 @@ void GameObject::SetObjectPosition()
 	std::cout << "X Position is: " << randX << "And Y Position is: " << randY << std::endl; 
 }
 
-void GameObject::RandomMovement()//take delta time as a float 
+void GameObject::RandomMovement(float deltaTime)//take delta time as a float 
 {
-    //destinationReached = false;
-	//static const float arrivalThreshold = 5.0f;
-	
-
-	
-	int randX = rand() % 800 + 1;
-	int randY = rand() % 600 + 1;
-	Vector2	movePos = Vector2(randX, randY);
-	//destinationReached = false;
-	 
-		
-	//destinationReached = false;
-	std::cout << "New Dest is: " << movePos.x << " : " << movePos.y << std::endl;
-	pos = Vector2::MoveTowards(pos, movePos,0.1);///need proper arrival check, speed and delta time for this to work better, as well as only setting
-	                                             // new position when reached the old one 
-	
-
-  /*if (Vector2::Distance(pos, movePos) < arrivalThreshold)
+	if (!movementStopped)
 	{
-		destinationReached = true;
+		static const float arrivalThreshold = 0.5f;
+	    
+		if (arrived)
+		{
+			int randX = rand() % 800 + 1;
+			int randY = rand() % 600 + 1;
+			movePos = Vector2(randX, randY);
+			std::cout << "New Dest is: " << movePos.x << " : " << movePos.y << std::endl;
+			arrived = false;
+		}
+
+
+		pos = Vector2::MoveTowards(pos, movePos, 100 * deltaTime);///need proper arrival check, speed and delta time for this to work better, as well as only setting
+		// new position when reached the old one 
+		if (Vector2::Distance(pos, movePos) < arrivalThreshold)
+		{
+			arrived = true;
+		}
 	}
-	*/
+	
+
+}
+
+void GameObject::OnCollisionEnter()
+{
+	movementStopped = true;
+
+	ChangeTexture();
+
+	//return to movement enabled once bounced away 
 }

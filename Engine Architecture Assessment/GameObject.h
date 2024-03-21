@@ -40,16 +40,19 @@ public:
 private:
 	void ChangeTexture();
 	void SetObjectPosition();
-	void RandomMovement();
+	void RandomMovement(float deltaTime);
+	void OnCollisionEnter(/*Collider here*/);
 	///need movement and need to work out drawing circles with textures too 
 	std::string name;
 	ObjectType Object;
 	Vector2 pos;
+	Vector2 movePos;
 	float speed = 5;
 	float width = 40;
 	float height = 40;
 	float rotation = 0;
-	bool destinationReached;
+	bool arrived = true;
+	bool movementStopped = false; //will be flagged true when collision occurs and movement will temporarily be handled elsewhere 
 	SDL_Renderer* Renderer = nullptr;
 	SDL_Texture* texture = nullptr;
 	SDL_Texture* Maintexture = nullptr;

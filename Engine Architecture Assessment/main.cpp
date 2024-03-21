@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Game.h"
 #include "SDL.h"
+#include <ctime>
 
 
 bool Initialise()
@@ -13,7 +14,8 @@ bool Initialise()
 }
 int main(int argc, char* argv[])
 {
-	srand(time(NULL));
+	//srand(time(NULL));
+	srand(static_cast<unsigned int>(time(0)));
 
 	if (Initialise())
 	{

@@ -4,6 +4,7 @@
 #include <list>
 #include "SDL_image.h"
 #include "GameObject.h"
+#include "Time.h"
 class GameObject;
 enum ObjectType;
 class Game
