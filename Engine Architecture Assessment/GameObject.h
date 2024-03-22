@@ -11,7 +11,7 @@ enum ObjectType
 	Square,
 	Circle
 };
-struct Parameters 
+struct SquareParameters 
 {
 	SDL_Texture* texture;
 	SDL_Texture* SecondTexture;
@@ -19,6 +19,10 @@ struct Parameters
 	ObjectType type;
 
 
+};
+struct CircleParameters
+{
+	int32_t radius;
 };
 struct ObjectRect
 {
@@ -28,7 +32,7 @@ class GameObject:public IObserver
 {
 public:
 	GameObject(ObjectType type);
-	GameObject(Parameters params);
+	GameObject(SquareParameters params);
 	~GameObject();
 	
 	void Update();

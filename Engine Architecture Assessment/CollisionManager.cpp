@@ -1,6 +1,7 @@
 #include "CollisionManager.h"
+
 CollisionManager* CollisionManager::_instance = nullptr; 
-bool CollisionManager::SquareCollision()
+bool CollisionManager::SquareCollision(BoxCollider* collider1, BoxCollider* Collider2)
 {
 	return false;
 }
@@ -17,4 +18,14 @@ bool CollisionManager::BoundsCollision()
 
 void CollisionManager::CreateCollider()
 {
+}
+
+void CollisionManager::HandleCollision()
+{
+
+}
+
+void CollisionManager::Update()
+{
+
 }

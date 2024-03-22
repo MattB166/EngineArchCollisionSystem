@@ -116,14 +116,21 @@ void Game::Update()
 
 void Game::SpawnObjects(ObjectType type, int amount,SDL_Renderer* renderer, SDL_Texture* FirstTexture, SDL_Texture* SecondTexture)
 {
-	///run through and spawn some squares and circles 
-	for (int i = 0; i < amount; ++i)
+	if (type == Square)
 	{
-		Parameters param{ FirstTexture,SecondTexture,renderer,type };
-		GameObject* obj = new GameObject(param);
-		objects.push_back(obj);
+		for (int i = 0; i < amount; ++i)
+		{
+			SquareParameters param{ FirstTexture,SecondTexture,renderer,type };
+			GameObject* obj = new GameObject(param);
+			objects.push_back(obj);
+		}
+		std::cout << "Spawned " << amount << " of " << GameObject::ObjectTypeToString(type);
 	}
-	std::cout << "Spawned " << amount << " of " << GameObject::ObjectTypeToString(type);
+	else if (type == Circle)
+	{
+
+	}
+	
 
 	
 }

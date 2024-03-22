@@ -9,7 +9,7 @@ GameObject::GameObject(ObjectType type)
 	
 }
 
-GameObject::GameObject(Parameters params)
+GameObject::GameObject(SquareParameters params)
 {
 	MainTexture = params.texture; 
 	SecondaryTexture = params.SecondTexture;
@@ -34,6 +34,8 @@ void GameObject::Draw()
 	if (Object == Circle)
 	{
 		std::cout << "Cannot currently draw a circle. " << std::endl;
+
+
 	}
 	else if (Object == Square)
 	{
@@ -125,7 +127,7 @@ void GameObject::RandomMovement(float deltaTime)//take delta time as a float
 
 
 		pos = Vector2::MoveTowards(pos, movePos, speed * deltaTime);///need proper arrival check, speed and delta time for this to work better, as well as only setting
-		rotation += 1;
+		
 		
 		// new position when reached the old one 
 		if (Vector2::Distance(pos, movePos) < arrivalThreshold)
