@@ -12,10 +12,20 @@ void Game::Run()
 	}
 	//load textures here and assign them to the shapes 
 	SDL_Texture* MagicTexture = SDL_CreateTexture(g_sdlRenderer, SDL_PIXELFORMAT_ARGB32, SDL_TEXTUREACCESS_TARGET, 64, 64);
+	SDL_SetRenderTarget(g_sdlRenderer, MagicTexture);
+	SDL_SetRenderDrawColor(g_sdlRenderer, 255, 0, 0, 255);
+	SDL_RenderClear(g_sdlRenderer);
+	SDL_SetRenderTarget(g_sdlRenderer, NULL);
+	SDL_Texture* SecondTexture = SDL_CreateTexture(g_sdlRenderer, SDL_PIXELFORMAT_ARGB32, SDL_TEXTUREACCESS_TARGET, 64, 64);
+	SDL_SetRenderTarget(g_sdlRenderer, SecondTexture);
+	SDL_SetRenderDrawColor(g_sdlRenderer, 255, 255, 255, 255);
+	SDL_RenderClear(g_sdlRenderer);
+	SDL_SetRenderTarget(g_sdlRenderer, NULL);
 	
-	SpawnObjects(Square, 3,g_sdlRenderer, MagicTexture);
+	SpawnObjects(Square, 3,g_sdlRenderer, MagicTexture,SecondTexture);
+	
 	//SpawnObjects(Circle, 2, g_sdlRenderer, MagicTexture);
-	//SDL_SetRenderTarget(g_sdlRenderer, MagicTexture);
+	
 	isRunning = true;
 	
 	while (isRunning)
@@ -25,6 +35,8 @@ void Game::Run()
 		Update(); 
 		SDL_RenderPresent(g_sdlRenderer);
 	}
+	SDL_DestroyTexture(MagicTexture);
+	SDL_DestroyTexture(SecondTexture);
 	CleanUp();
 }
 
@@ -53,6 +65,7 @@ bool Game::Initialise()
 
 void Game::CleanUp()
 {
+
 	SDL_DestroyRenderer(g_sdlRenderer);
 	SDL_DestroyWindow(g_sdlWindow);
 	SDL_Quit();
@@ -97,16 +110,16 @@ void Game::Update()
 		(*iter)->Update();
 	}
 
-	
+	//std::cout << Time::instance()->GetDeltaTime() << std::endl;
 	
 }
 
-void Game::SpawnObjects(ObjectType type, int amount,SDL_Renderer* renderer, SDL_Texture* texture)
+void Game::SpawnObjects(ObjectType type, int amount,SDL_Renderer* renderer, SDL_Texture* FirstTexture, SDL_Texture* SecondTexture)
 {
 	///run through and spawn some squares and circles 
 	for (int i = 0; i < amount; ++i)
 	{
-		Parameters param{ texture,texture,renderer,type };
+		Parameters param{ FirstTexture,SecondTexture,renderer,type };
 		GameObject* obj = new GameObject(param);
 		objects.push_back(obj);
 	}

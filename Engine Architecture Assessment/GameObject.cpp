@@ -11,10 +11,11 @@ GameObject::GameObject(ObjectType type)
 
 GameObject::GameObject(Parameters params)
 {
-	Maintexture = params.texture; 
+	MainTexture = params.texture; 
 	SecondaryTexture = params.SecondTexture;
 	Renderer = params.renderer; 
 	Object = params.type;
+	texture = MainTexture;
 	SetObjectPosition();
 	//RegisterToEvents();
 	Observe();
@@ -23,7 +24,8 @@ GameObject::GameObject(Parameters params)
 
 GameObject::~GameObject()
 {
-	SDL_DestroyTexture(Maintexture);
+	SDL_DestroyTexture(texture);
+	SDL_DestroyTexture(MainTexture);
 	SDL_DestroyTexture(SecondaryTexture);
 }
 
@@ -39,8 +41,7 @@ void GameObject::Draw()
 
 		SDL_Rect dstRect{ ObjectCentre.x,ObjectCentre.y,width,height };
 		SDL_RendererFlip flip = SDL_FLIP_NONE;
-
-		SDL_RenderCopyEx(Game::instance()->GetRenderer(), Maintexture, NULL, &dstRect, rotation, NULL, flip);
+		SDL_RenderCopyEx(Game::instance()->GetRenderer(), texture, NULL, &dstRect, rotation, NULL, flip);
 	}
 	
 	 
@@ -80,7 +81,18 @@ void GameObject::Observe()
 
 void GameObject::ChangeTexture()
 {
-	
+	if (textureActive == true)
+	{
+		texture = SecondaryTexture;
+		SecondaryTexture = MainTexture;
+		textureActive = false;
+	}
+	else
+	{
+		SecondaryTexture = texture;
+		texture = MainTexture;
+		textureActive = true;
+	}
 }
 
 void GameObject::SetObjectPosition()
@@ -93,7 +105,7 @@ void GameObject::SetObjectPosition()
 	pos.x = randX;
 	pos.y = randY; 
 
-	std::cout << "X Position is: " << randX << "And Y Position is: " << randY << std::endl; 
+	//std::cout << "X Position is: " << randX << "And Y Position is: " << randY << std::endl; 
 }
 
 void GameObject::RandomMovement(float deltaTime)//take delta time as a float 
@@ -107,16 +119,19 @@ void GameObject::RandomMovement(float deltaTime)//take delta time as a float
 			int randX = rand() % 800 + 1;
 			int randY = rand() % 600 + 1;
 			movePos = Vector2(randX, randY);
-			std::cout << "New Dest is: " << movePos.x << " : " << movePos.y << std::endl;
+			//std::cout << "New Dest is: " << movePos.x << " : " << movePos.y << std::endl;
 			arrived = false;
 		}
 
 
-		pos = Vector2::MoveTowards(pos, movePos, 100 * deltaTime);///need proper arrival check, speed and delta time for this to work better, as well as only setting
+		pos = Vector2::MoveTowards(pos, movePos, speed * deltaTime);///need proper arrival check, speed and delta time for this to work better, as well as only setting
+		rotation += 1;
+		
 		// new position when reached the old one 
 		if (Vector2::Distance(pos, movePos) < arrivalThreshold)
 		{
 			arrived = true;
+			ChangeTexture();
 		}
 	}
 	

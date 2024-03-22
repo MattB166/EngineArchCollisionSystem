@@ -30,7 +30,7 @@ public:
 	GameObject(ObjectType type);
 	GameObject(Parameters params);
 	~GameObject();
-	void Draw();
+	
 	void Update();
 	static std::string ObjectTypeToString(ObjectType type);
 	std::string getName();
@@ -39,6 +39,7 @@ public:
 
 private:
 	void ChangeTexture();
+	void Draw();
 	void SetObjectPosition();
 	void RandomMovement(float deltaTime);
 	void OnCollisionEnter(/*Collider here*/);
@@ -47,14 +48,15 @@ private:
 	ObjectType Object;
 	Vector2 pos;
 	Vector2 movePos;
-	float speed = 5;
+	float speed = 60;
 	float width = 40;
 	float height = 40;
 	float rotation = 0;
 	bool arrived = true;
+	bool textureActive = true;
 	bool movementStopped = false; //will be flagged true when collision occurs and movement will temporarily be handled elsewhere 
 	SDL_Renderer* Renderer = nullptr;
 	SDL_Texture* texture = nullptr;
-	SDL_Texture* Maintexture = nullptr;
+	SDL_Texture* MainTexture = nullptr;
 	SDL_Texture* SecondaryTexture = nullptr;
 };

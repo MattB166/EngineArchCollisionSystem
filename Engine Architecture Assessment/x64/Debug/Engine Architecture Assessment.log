@@ -1,15 +1,2 @@
-﻿  GameObject.cpp
-C:\Users\Matth\Documents\YEAR 2\EngineArch\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(40,33): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-C:\Users\Matth\Documents\YEAR 2\EngineArch\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(40,33): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\Matth\Documents\YEAR 2\EngineArch\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(40,48): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-C:\Users\Matth\Documents\YEAR 2\EngineArch\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(40,48): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\Matth\Documents\YEAR 2\EngineArch\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(40,51): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-C:\Users\Matth\Documents\YEAR 2\EngineArch\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(40,51): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\Matth\Documents\YEAR 2\EngineArch\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(40,57): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-C:\Users\Matth\Documents\YEAR 2\EngineArch\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(40,57): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\Matth\Documents\YEAR 2\EngineArch\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(93,10): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\Matth\Documents\YEAR 2\EngineArch\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(94,10): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\Matth\Documents\YEAR 2\EngineArch\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(109,29): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Matth\Documents\YEAR 2\EngineArch\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(109,22): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Matth\Documents\YEAR 2\EngineArch\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(69): warning C4715: 'GameObject::ObjectTypeToString': not all control paths return a value
+﻿  Game.cpp
   Engine Architecture Assessment.vcxproj -> C:\Users\Matth\Documents\YEAR 2\EngineArch\EngineArchCollisionSystem\Engine Architecture Assessment\x64\Debug\Engine Architecture Assessment.exe

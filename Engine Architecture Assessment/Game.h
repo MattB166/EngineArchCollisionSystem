@@ -25,7 +25,7 @@ private:
 	SDL_Window* g_sdlWindow;
 	SDL_Renderer* g_sdlRenderer;
 	void Update();
-	void SpawnObjects(ObjectType type, int amount, SDL_Renderer* renderer, SDL_Texture* texture);
+	void SpawnObjects(ObjectType type, int amount, SDL_Renderer* renderer, SDL_Texture* FirstTexture, SDL_Texture* SecondTexture);
 	bool isRunning;
 	
 	// pointer reference to event manager/handler 
