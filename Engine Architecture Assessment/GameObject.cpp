@@ -16,7 +16,13 @@ GameObject::GameObject(SquareParameters params)
 	Renderer = params.renderer; 
 	Object = params.type;
 	texture = MainTexture;
+	information = new ObjectRect();
 	SetObjectPosition();
+	information->x = pos.x;
+	information->y = pos.y;
+	information->w = width;
+	information->h = height;
+	information->radius = radius;
 	//RegisterToEvents();
 	Observe();
 	///add collider to collision class 
@@ -27,6 +33,7 @@ GameObject::~GameObject()
 	SDL_DestroyTexture(texture);
 	SDL_DestroyTexture(MainTexture);
 	SDL_DestroyTexture(SecondaryTexture);
+	delete(information);
 }
 
 void GameObject::Draw()
@@ -46,7 +53,12 @@ void GameObject::Draw()
 		SDL_RenderCopyEx(Game::instance()->GetRenderer(), texture, NULL, &dstRect, rotation, NULL, flip);
 	}
 	
-	 
+	information->x = pos.x;
+	information->y = pos.y;
+	information->w = width;
+	information->h = height;
+	information->rotation = rotation;
+
 	
 }
 
@@ -54,6 +66,10 @@ void GameObject::Update()
 {
 	Draw();
 	RandomMovement(Time::instance()->GetDeltaTime()); ///works but its absolutely mental atm. need speed and delta time 
+}
+ObjectType GameObject::GetType()
+{
+	return Object;
 }
 
 std::string GameObject::ObjectTypeToString(ObjectType type)
@@ -69,6 +85,16 @@ std::string GameObject::ObjectTypeToString(ObjectType type)
 	default:
 		break;
 	}
+}
+
+Vector2 GameObject::GetPosition()
+{
+	return pos;
+}
+
+ObjectRect* GameObject::GetInformation()
+{
+	return information;
 }
 
 std::string GameObject::getName()

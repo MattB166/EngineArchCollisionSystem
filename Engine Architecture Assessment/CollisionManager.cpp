@@ -16,13 +16,20 @@ bool CollisionManager::BoundsCollision()
 	return false;
 }
 
-void CollisionManager::CreateCollider()
+void CollisionManager::CreateCollider(float x,float y,float w,float h, float rotation, float radius)
 {
+	std::cout << "creating collider for listener" << std::endl; 
+	///initialise new collider here 
 }
 
 void CollisionManager::HandleCollision()
 {
 
+}
+
+void CollisionManager::UpdatePositions()
+{
+	//std::cout << "Updating positions of colliders" << std::endl; 
 }
 
 void CollisionManager::Update()

@@ -26,7 +26,7 @@ struct CircleParameters
 };
 struct ObjectRect
 {
-	float x, y, w, h;
+	float x, y, w, h,rotation,radius;  ///might need to be pointers 
 };
 class GameObject:public IObserver
 {
@@ -37,7 +37,10 @@ public:
 	
 	void Update();
 	static std::string ObjectTypeToString(ObjectType type);
+	Vector2 GetPosition();
+	ObjectRect* GetInformation();
 	std::string getName();
+	ObjectType GetType();
 	//void Spawn(ObjectType type);
 	void Observe() override;
 
@@ -52,10 +55,12 @@ private:
 	ObjectType Object;
 	Vector2 pos;
 	Vector2 movePos;
+	ObjectRect* information;
 	float speed = 60;
 	float width = 40;
 	float height = 40;
 	float rotation = 0;
+	float radius;
 	bool arrived = true;
 	bool textureActive = true;
 	bool movementStopped = false; //will be flagged true when collision occurs and movement will temporarily be handled elsewhere 

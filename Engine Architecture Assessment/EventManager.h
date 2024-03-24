@@ -1,14 +1,15 @@
 #pragma once
 #include "GameObject.h"
-#include <queue> ///class to queue the events 
+#include <queue>  
 #include <list>
+#include "CollisionManager.h"
 class GameObject;
 class EventManager
 {
 public: 
-	static EventManager* instance() { return _instance != nullptr ? _instance : _instance = new EventManager(); } ///might not need to be an instance
-   //as each object might need its own event manager 
+	static EventManager* instance() { return _instance != nullptr ? _instance : _instance = new EventManager(); } 
 	void RegisterListener(GameObject* listener);
+	void UpdateCollisionSystem();
 private:
 	static EventManager* _instance;
 	
@@ -17,7 +18,7 @@ private:
 	//void AddEvent(CollisionEvent event);
 	//void DispatchEvents();
 	
-	std::list<GameObject*> listeners;
+	std::list<GameObject*> listeners;  //need to constantly be telling the collision system the new positions of the listeners 
 	
 };
 

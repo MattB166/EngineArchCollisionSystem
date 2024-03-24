@@ -109,6 +109,7 @@ void Game::Update()
 	{
 		(*iter)->Update();
 	}
+	EventManager::instance()->UpdateCollisionSystem();
 
 	//std::cout << Time::instance()->GetDeltaTime() << std::endl;
 	
