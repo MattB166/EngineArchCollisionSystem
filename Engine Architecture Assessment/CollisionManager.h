@@ -1,6 +1,6 @@
 #pragma once
 #include "Collider.h"
-#include "GameObject.h"
+#include <iostream>
 #include "BoxCollider.h"
 #include <list>
 class CollisionManager   
@@ -14,7 +14,7 @@ public:
 	static bool CircleCollision(/*radii and base x and y's set here*/);
 
 	static bool BoundsCollision(); ////checking whether objects bouncing off walls 
-	void CreateCollider(float x,float y,float w, float h);
+	void CreateCollider(float &x,float &y,float &w, float &h);
 	void HandleCollision();
 	void UpdatePositions();
 	void Update();

@@ -16,16 +16,16 @@ GameObject::GameObject(Parameters params)
 	Renderer = params.renderer; 
 	Object = params.type;
 	texture = MainTexture;
-	information = new ObjectRect();
+	//information = new ObjectRect();
 	SetObjectPosition();
-	information->x = pos.x;
-	information->y = pos.y;
-	information->w = width;
-	information->h = height;
-	//information->radius = radius;
-	//RegisterToEvents();
+	/*information.x = pos.x;
+	information.y = pos.y;
+	information.w = width;
+	information.h = height;*/
+	
+	
 	Observe();
-	///add collider to collision class 
+	
 }
 
 GameObject::~GameObject()
@@ -33,18 +33,13 @@ GameObject::~GameObject()
 	SDL_DestroyTexture(texture);
 	SDL_DestroyTexture(MainTexture);
 	SDL_DestroyTexture(SecondaryTexture);
-	delete(information);
+	//delete(information);
 }
 
-void GameObject::Draw()
+void GameObject::Draw()    ///make virtual void 
 {
-	if (Object == ShapeCircle)
-	{
-		std::cout << "Cannot currently draw a circle. " << std::endl;
-
-
-	}
-	else if (Object == ShapeSquare)
+	
+	 if (Object == ShapeSquare)
 	{
 		Vector2 ObjectCentre = pos + Vector2(width / 2, height / 2);
 
@@ -53,17 +48,19 @@ void GameObject::Draw()
 		SDL_RenderCopyEx(Game::instance()->GetRenderer(), texture, NULL, &dstRect, rotation, NULL, flip);
 	}
 	
-	information->x = pos.x;
-	information->y = pos.y;
-	information->w = width;
-	information->h = height;
+	/*information.x = pos.x;
+	information.y = pos.y;
+	information.w = width;
+	information.h = height;*/
 	//information->rotation = rotation;
 
 	
 }
 
+
 void GameObject::Update()
 {
+	
 	Draw();
 	RandomMovement(Time::instance()->GetDeltaTime()); ///works but its absolutely mental atm. need speed and delta time 
 }
@@ -92,10 +89,10 @@ Vector2 GameObject::GetPosition()
 	return pos;
 }
 
-ObjectRect* GameObject::GetInformation()
-{
-	return information;
-}
+//ObjectRect GameObject::GetInformation()
+//{
+//	return information;
+//}
 
 std::string GameObject::getName()
 {
@@ -147,11 +144,11 @@ void GameObject::RandomMovement(float deltaTime)//take delta time as a float
 			int randX = rand() % 800 + 1;
 			int randY = rand() % 600 + 1;
 			movePos = Vector2(randX, randY);
-			//std::cout << "New Dest is: " << movePos.x << " : " << movePos.y << std::endl;
+			std::cout << "New Dest is: " << movePos.x << " : " << movePos.y << std::endl;
 			arrived = false;
 		}
 
-
+		//pos.x += 5;
 		pos = Vector2::MoveTowards(pos, movePos, speed * deltaTime);///need proper arrival check, speed and delta time for this to work better, as well as only setting
 		
 		

@@ -5,6 +5,7 @@
 #include "Game.h"
 #include "Vector2.h"
 #include "EventManager.h"
+#include "CollisionManager.h"
 #include "IObserver.h"
 enum ObjectType
 {
@@ -28,10 +29,10 @@ struct CircleParameters
 {
 	int32_t radius;
 };
-struct ObjectRect
-{
-	float x, y, w, h;  ///might need to be pointers 
-};
+//struct ObjectRect
+//{
+//	float x, y, w, h;  ///might need to be pointers 
+//};
 class GameObject:public IObserver
 {
 public:
@@ -42,7 +43,7 @@ public:
 	void Update();
 	static std::string ObjectTypeToString(ObjectType type);
 	Vector2 GetPosition();
-	ObjectRect* GetInformation();
+	//ObjectRect GetInformation();
 	std::string getName();
 	ObjectType GetType();
 	//void Spawn(ObjectType type);
@@ -50,7 +51,7 @@ public:
 
 protected:
 	void ChangeTexture();
-	void Draw();
+	virtual void Draw();
 	void SetObjectPosition();
 	void RandomMovement(float deltaTime);
 	void OnCollisionEnter(/*Collider here*/);
@@ -59,7 +60,7 @@ protected:
 	ObjectType Object;
 	Vector2 pos;
 	Vector2 movePos;
-	ObjectRect* information;
+	//ObjectRect information;
 	float speed = 60;
 	float width = 40;
 	float height = 40;

@@ -26,7 +26,6 @@ void Game::Run()
 	
 	SpawnObjects(ObjectType::ShapeSquare, 3,g_sdlRenderer, MagicTexture,SecondTexture);
 	
-	//SpawnObjects(Circle, 2, g_sdlRenderer, MagicTexture);
 	
 	isRunning = true;
 	
@@ -111,7 +110,7 @@ void Game::Update()
 	{
 		(*iter)->Update();
 	}
-	EventManager::instance()->UpdateCollisionSystem(); ///shouldnt be doing inside event manager 
+	EventManager::instance()->UpdateCollisionSystem(); ///shouldnt be doing inside event manager. do in game class 
 
 	//std::cout << Time::instance()->GetDeltaTime() << std::endl;
 	

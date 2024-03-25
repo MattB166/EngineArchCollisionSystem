@@ -1,9 +1,16 @@
 #pragma once
+enum Type
+{
+	SquareCollider,
+	CircleCollider
+};
 class Collider
 {
 public:
 
-	float x, y;
-	virtual void SetPosition(float x, float y) = 0;
+	void SetColliderType(Type type);
+	Type GetColliderType();
+private:
+	Type ColliderType;
 };
 

@@ -2,8 +2,13 @@
 #include "Collider.h"
 class BoxCollider : public Collider
 {
-	float width;
-	float height;
-	virtual void SetPosition(float NewX, float NewY) override;
+public:
+	BoxCollider(float& x, float& y, float& width, float& height);
+private:
+	float* width;
+	float* height;
+	float* x;
+	float* y;
+	
 };
 

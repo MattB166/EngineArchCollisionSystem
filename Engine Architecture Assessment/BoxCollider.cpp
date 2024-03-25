@@ -1,7 +1,12 @@
 #include "BoxCollider.h"
 
-void BoxCollider::SetPosition(float NewX, float NewY)
+
+
+BoxCollider::BoxCollider(float& x, float& y, float& width, float& height)
 {
-	x = NewX;
-	y = NewY;
+	this->x = &x;
+	this->y = &y;
+	this->width = &width;
+	this->height = &height; ///should be able to track these values inside collision manager now 
+
 }
