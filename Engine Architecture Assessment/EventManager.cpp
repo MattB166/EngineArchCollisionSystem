@@ -5,13 +5,13 @@ void EventManager::RegisterListener(GameObject* listener)
 {
 	listeners.push_back(listener);
 	std::cout << "Added: " << listener->getName() << " to listeners list" << std::endl; 
-	if (listener->GetType() == Square)
+	if (listener->GetType() == ShapeSquare)
 	{
-		CollisionManager::instance()->CreateCollider(listener->GetInformation()->x, listener->GetInformation()->y, listener->GetInformation()->w, listener->GetInformation()->h, listener->GetInformation()->rotation, NULL);
+		CollisionManager::instance()->CreateCollider(listener->GetInformation()->x, listener->GetInformation()->y, listener->GetInformation()->w, listener->GetInformation()->h);
 	}
-	else if (listener->GetType() == Circle)
+	else if (listener->GetType() == ShapeCircle)
 	{
-		CollisionManager::instance()->CreateCollider(listener->GetInformation()->x, listener->GetInformation()->y, listener->GetInformation()->w, listener->GetInformation()->h, listener->GetInformation()->rotation, listener->GetInformation()->radius);
+		CollisionManager::instance()->CreateCollider(listener->GetInformation()->x, listener->GetInformation()->y, listener->GetInformation()->w, listener->GetInformation()->h);
 	}
 	
 }

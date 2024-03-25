@@ -8,31 +8,35 @@
 #include "IObserver.h"
 enum ObjectType
 {
-	Square,
-	Circle
+	ShapeSquare,
+	ShapeCircle
 };
-struct SquareParameters 
+struct Parameters 
 {
 	SDL_Texture* texture;
 	SDL_Texture* SecondTexture;
 	SDL_Renderer* renderer;
 	ObjectType type;
 
-
+	Parameters(SDL_Texture* texture,
+		SDL_Texture* SecondTexture,
+		SDL_Renderer* renderer,
+		ObjectType type);
 };
+
 struct CircleParameters
 {
 	int32_t radius;
 };
 struct ObjectRect
 {
-	float x, y, w, h,rotation,radius;  ///might need to be pointers 
+	float x, y, w, h;  ///might need to be pointers 
 };
 class GameObject:public IObserver
 {
 public:
 	GameObject(ObjectType type);
-	GameObject(SquareParameters params);
+	GameObject(Parameters params);
 	~GameObject();
 	
 	void Update();
@@ -44,7 +48,7 @@ public:
 	//void Spawn(ObjectType type);
 	void Observe() override;
 
-private:
+protected:
 	void ChangeTexture();
 	void Draw();
 	void SetObjectPosition();

@@ -9,7 +9,7 @@ GameObject::GameObject(ObjectType type)
 	
 }
 
-GameObject::GameObject(SquareParameters params)
+GameObject::GameObject(Parameters params)
 {
 	MainTexture = params.texture; 
 	SecondaryTexture = params.SecondTexture;
@@ -22,7 +22,7 @@ GameObject::GameObject(SquareParameters params)
 	information->y = pos.y;
 	information->w = width;
 	information->h = height;
-	information->radius = radius;
+	//information->radius = radius;
 	//RegisterToEvents();
 	Observe();
 	///add collider to collision class 
@@ -38,13 +38,13 @@ GameObject::~GameObject()
 
 void GameObject::Draw()
 {
-	if (Object == Circle)
+	if (Object == ShapeCircle)
 	{
 		std::cout << "Cannot currently draw a circle. " << std::endl;
 
 
 	}
-	else if (Object == Square)
+	else if (Object == ShapeSquare)
 	{
 		Vector2 ObjectCentre = pos + Vector2(width / 2, height / 2);
 
@@ -57,7 +57,7 @@ void GameObject::Draw()
 	information->y = pos.y;
 	information->w = width;
 	information->h = height;
-	information->rotation = rotation;
+	//information->rotation = rotation;
 
 	
 }
@@ -76,10 +76,10 @@ std::string GameObject::ObjectTypeToString(ObjectType type)
 {
 	switch (type)
 	{
-	case Square:
+	case ShapeSquare:
 		return "Square";
 		break;
-	case Circle:
+	case ShapeCircle:
 		return "Circle";
 		break;
 	default:
@@ -173,4 +173,12 @@ void GameObject::OnCollisionEnter()
 	ChangeTexture();
 
 	//return to movement enabled once bounced away 
+}
+
+Parameters::Parameters(SDL_Texture* texture, SDL_Texture* SecondTexture, SDL_Renderer* renderer, ObjectType type)
+{
+	this->texture = texture;
+	this->SecondTexture = SecondTexture;
+	this->renderer = renderer;
+	this->type = type;
 }

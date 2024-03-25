@@ -14,7 +14,7 @@ public:
 	static bool CircleCollision(/*radii and base x and y's set here*/);
 
 	static bool BoundsCollision(); ////checking whether objects bouncing off walls 
-	void CreateCollider(float x,float y,float w, float h,float rotation, float radius);
+	void CreateCollider(float x,float y,float w, float h);
 	void HandleCollision();
 	void UpdatePositions();
 	void Update();

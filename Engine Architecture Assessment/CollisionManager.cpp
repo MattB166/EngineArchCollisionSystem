@@ -16,7 +16,7 @@ bool CollisionManager::BoundsCollision()
 	return false;
 }
 
-void CollisionManager::CreateCollider(float x,float y,float w,float h, float rotation, float radius)
+void CollisionManager::CreateCollider(float x,float y,float w,float hs)
 {
 	std::cout << "creating collider for listener" << std::endl; 
 	///initialise new collider here 

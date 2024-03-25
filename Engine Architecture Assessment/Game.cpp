@@ -1,4 +1,6 @@
 #include "Game.h"
+#include "Square.h"
+
 Game* Game::_instance = nullptr;
 float Game::WorldX = 800;
 float Game::WorldY = 600;
@@ -22,7 +24,7 @@ void Game::Run()
 	SDL_RenderClear(g_sdlRenderer);
 	SDL_SetRenderTarget(g_sdlRenderer, NULL);
 	
-	SpawnObjects(Square, 3,g_sdlRenderer, MagicTexture,SecondTexture);
+	SpawnObjects(ObjectType::ShapeSquare, 3,g_sdlRenderer, MagicTexture,SecondTexture);
 	
 	//SpawnObjects(Circle, 2, g_sdlRenderer, MagicTexture);
 	
@@ -109,7 +111,7 @@ void Game::Update()
 	{
 		(*iter)->Update();
 	}
-	EventManager::instance()->UpdateCollisionSystem();
+	EventManager::instance()->UpdateCollisionSystem(); ///shouldnt be doing inside event manager 
 
 	//std::cout << Time::instance()->GetDeltaTime() << std::endl;
 	
@@ -117,17 +119,17 @@ void Game::Update()
 
 void Game::SpawnObjects(ObjectType type, int amount,SDL_Renderer* renderer, SDL_Texture* FirstTexture, SDL_Texture* SecondTexture)
 {
-	if (type == Square)
+	if (type == ObjectType::ShapeSquare)
 	{
 		for (int i = 0; i < amount; ++i)
 		{
-			SquareParameters param{ FirstTexture,SecondTexture,renderer,type };
-			GameObject* obj = new GameObject(param);
-			objects.push_back(obj);
+			Parameters params(FirstTexture, SecondTexture, renderer, type);
+			Square* square = new Square(params);
+			objects.push_back(square);
 		}
 		std::cout << "Spawned " << amount << " of " << GameObject::ObjectTypeToString(type);
 	}
-	else if (type == Circle)
+	else if (type == ShapeCircle)
 	{
 
 	}
