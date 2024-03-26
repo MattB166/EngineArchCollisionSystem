@@ -19,7 +19,7 @@ private:
 	//void DispatchEvents();
 	
 	std::list<GameObject*> listeners;  //need to constantly be telling the collision system the new positions of the listeners 
-	
+	////list of std functions to call gameobjects collision functions 
 };
 
 	

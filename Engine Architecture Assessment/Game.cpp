@@ -1,5 +1,6 @@
 #include "Game.h"
 #include "Square.h"
+#include "Circle.h"
 
 Game* Game::_instance = nullptr;
 float Game::WorldX = 800;
@@ -25,7 +26,7 @@ void Game::Run()
 	SDL_SetRenderTarget(g_sdlRenderer, NULL);
 	
 	SpawnObjects(ObjectType::ShapeSquare, 3,g_sdlRenderer, MagicTexture,SecondTexture);
-	
+	SpawnObjects(ObjectType::ShapeCircle, 1, g_sdlRenderer, MagicTexture, SecondTexture);
 	
 	isRunning = true;
 	
@@ -130,7 +131,13 @@ void Game::SpawnObjects(ObjectType type, int amount,SDL_Renderer* renderer, SDL_
 	}
 	else if (type == ShapeCircle)
 	{
-
+		for (int i = 0; i < amount; ++i)
+		{
+			Parameters params(FirstTexture, SecondTexture, renderer, type);
+			CircleParameters param(30);
+			Circle* circle = new Circle(params, param);
+			objects.push_back(circle);
+		}
 	}
 	
 

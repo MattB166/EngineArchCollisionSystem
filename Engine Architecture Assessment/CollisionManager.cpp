@@ -30,7 +30,7 @@ bool CollisionManager::BoundsCollision()
 
 void CollisionManager::HandleCollision()
 {
-
+	
 }
 
 void CollisionManager::UpdatePositions()
@@ -47,13 +47,20 @@ void CollisionManager::Update()
 		if (col->GetColliderType() == SquareCollider)
 		{
 			BoxCollider* bCol = dynamic_cast<BoxCollider*>(col); ///i have downcasted to get access to their derived classes.
-			                                                     ///now need to compare against each other 
+			
+			///now need to compare against all other colliders and move the iterator up 
+
+			                                                 
+	
 		}
+
 	}
+
+	
 }
 
-void CollisionManager::AddCollider(Collider* collider)
+void CollisionManager::AddCollider(Collider* collider/*add function pointer here*/)
 {
 	colliders.push_back(collider);
-	//std::cout << "ADDED COLLIDER TO LIST" << std::endl; 
+	std::cout << "ADDED COLLIDER TO LIST" << std::endl; 
 }

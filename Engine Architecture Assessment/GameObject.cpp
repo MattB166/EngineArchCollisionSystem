@@ -25,6 +25,11 @@ GameObject::GameObject(Parameters params)
 	
 }
 
+GameObject::GameObject()
+{
+
+}
+
 GameObject::~GameObject()
 {
 	SDL_DestroyTexture(texture);
@@ -36,14 +41,21 @@ GameObject::~GameObject()
 void GameObject::Draw()    ///make virtual void 
 {
 	
-	 if (Object == ShapeSquare)
+	if (Object == ShapeSquare)
 	{
 		Vector2 ObjectCentre = pos + Vector2(width / 2, height / 2);
 
 		SDL_Rect dstRect{ ObjectCentre.x,ObjectCentre.y,width,height };
 		SDL_RendererFlip flip = SDL_FLIP_NONE;
 		SDL_RenderCopyEx(Game::instance()->GetRenderer(), texture, NULL, &dstRect, rotation, NULL, flip);
+
+	 }
+	else
+	{
+
 	}
+	
+		
 
 	
 }
