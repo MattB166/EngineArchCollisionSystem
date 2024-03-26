@@ -46,7 +46,8 @@ void CollisionManager::Update()
 
 		if (col->GetColliderType() == SquareCollider)
 		{
-			std::cout << "Found a square collider" << std::endl;
+			BoxCollider* bCol = dynamic_cast<BoxCollider*>(col); ///i have downcasted to get access to their derived classes.
+			                                                     ///now need to compare against each other 
 		}
 	}
 }

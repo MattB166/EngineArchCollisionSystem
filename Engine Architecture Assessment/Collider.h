@@ -7,7 +7,8 @@ enum Type
 class Collider
 {
 public:
-
+	Collider();
+	virtual ~Collider();
 	void SetColliderType(Type type);
 	Type GetColliderType();
 	bool enabled = true;

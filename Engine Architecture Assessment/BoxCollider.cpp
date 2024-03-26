@@ -13,3 +13,8 @@ BoxCollider::BoxCollider(float& x, float& y, float& width, float& height)
 	
 
 }
+
+BoxCollider::~BoxCollider()
+{
+
+}
