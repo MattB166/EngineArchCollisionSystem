@@ -16,12 +16,9 @@ GameObject::GameObject(Parameters params)
 	Renderer = params.renderer; 
 	Object = params.type;
 	texture = MainTexture;
-	//information = new ObjectRect();
+	
 	SetObjectPosition();
-	/*information.x = pos.x;
-	information.y = pos.y;
-	information.w = width;
-	information.h = height;*/
+	
 	
 	
 	Observe();
@@ -47,12 +44,6 @@ void GameObject::Draw()    ///make virtual void
 		SDL_RendererFlip flip = SDL_FLIP_NONE;
 		SDL_RenderCopyEx(Game::instance()->GetRenderer(), texture, NULL, &dstRect, rotation, NULL, flip);
 	}
-	
-	/*information.x = pos.x;
-	information.y = pos.y;
-	information.w = width;
-	information.h = height;*/
-	//information->rotation = rotation;
 
 	
 }
@@ -89,11 +80,6 @@ Vector2 GameObject::GetPosition()
 	return pos;
 }
 
-//ObjectRect GameObject::GetInformation()
-//{
-//	return information;
-//}
-
 std::string GameObject::getName()
 {
 	return name;
@@ -102,7 +88,14 @@ std::string GameObject::getName()
 void GameObject::Observe()
 {
 	EventManager::instance()->RegisterListener(this);
+	
 }
+
+//void GameObject::OnCollisionNotify(const GameObject& obj)
+//{
+//	//change texture and reverse movement 
+//	
+//}
 
 void GameObject::ChangeTexture()
 {
@@ -161,15 +154,6 @@ void GameObject::RandomMovement(float deltaTime)//take delta time as a float
 	}
 	
 
-}
-
-void GameObject::OnCollisionEnter()
-{
-	movementStopped = true;
-
-	ChangeTexture();
-
-	//return to movement enabled once bounced away 
 }
 
 Parameters::Parameters(SDL_Texture* texture, SDL_Texture* SecondTexture, SDL_Renderer* renderer, ObjectType type)

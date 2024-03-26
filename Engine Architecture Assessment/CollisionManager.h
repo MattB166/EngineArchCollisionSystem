@@ -11,13 +11,15 @@ public:
 	static bool SquareCollision(BoxCollider* collider1, BoxCollider* collider2);  /* aabb example for basic box collision.
 	if both axis overlap the boxes overlap*/
 	
-	static bool CircleCollision(/*radii and base x and y's set here*/);
+	static bool CircleCollision();
+
+	static bool CircleRectCollision();
 
 	static bool BoundsCollision(); ////checking whether objects bouncing off walls 
-	void CreateCollider(float &x,float &y,float &w, float &h);
 	void HandleCollision();
 	void UpdatePositions();
 	void Update();
+	void AddCollider(Collider* collider);
 
 private:
 	static CollisionManager* _instance;
@@ -25,4 +27,3 @@ private:
 	///way to generate colliders from here inside each object and set flags to whether they are active or not, so can showcase the system 
 };
 
-////also need a way to assign colliders to all generated objects 

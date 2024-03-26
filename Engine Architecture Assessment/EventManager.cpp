@@ -13,29 +13,17 @@ void EventManager::RegisterListener(GameObject* listener)
 	{
 		//CollisionManager::instance()->CreateCollider(listener->GetInformation()->x, listener->GetInformation()->y, listener->GetInformation()->w, listener->GetInformation()->h);
 	}
+
+	
 	
 }
 
 void EventManager::UpdateCollisionSystem()
 {
-	//CollisionManager::instance()->UpdatePositions();
+	
 	GameObject* listener1 = listeners.front();
-	/*std::cout << "First listener X position is: " << listener1->GetPosition().x << std::endl;
-	std::cout << "First listener Y position is: " << listener1->GetPosition().y << std::endl;
-	std::cout << "First Listener collider pos is :" << listener1->GetInformation()->x << ", " << listener1->GetInformation()->y << std::endl;*/
+	
 	std::cout << "\n\n\n" << std::endl;
 	
 }
 
-//void EventManager::AddEvent(CollisionEvent event)
-//{
-//	EventQueue.push(event);
-//}
-//
-//void EventManager::DispatchEvents()
-//{
-//	while (!EventQueue.empty())
-//	{
-//		EventQueue.pop(); 
-//	}
-//}

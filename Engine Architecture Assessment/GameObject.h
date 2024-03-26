@@ -43,19 +43,19 @@ public:
 	void Update();
 	static std::string ObjectTypeToString(ObjectType type);
 	Vector2 GetPosition();
-	//ObjectRect GetInformation();
+	
 	std::string getName();
 	ObjectType GetType();
-	//void Spawn(ObjectType type);
+	
 	void Observe() override;
+	//void OnCollisionNotify(const GameObject& obj) override;
 
 protected:
 	void ChangeTexture();
 	virtual void Draw();
 	void SetObjectPosition();
 	void RandomMovement(float deltaTime);
-	void OnCollisionEnter(/*Collider here*/);
-	///need movement and need to work out drawing circles with textures too 
+	
 	std::string name;
 	ObjectType Object;
 	Vector2 pos;

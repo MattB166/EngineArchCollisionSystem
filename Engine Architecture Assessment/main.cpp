@@ -25,7 +25,7 @@ int main(int argc, char* argv[])
 
 	Game::instance()->Run();
 
-	SDL_Quit();
+	//SDL_Quit();
 
 	return 0; 
 }

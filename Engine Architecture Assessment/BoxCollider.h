@@ -7,8 +7,8 @@ public:
 private:
 	float* width;
 	float* height;
-	float* x;
+	/*float* x;
 	float* y;
-	
+	*/
 };
 

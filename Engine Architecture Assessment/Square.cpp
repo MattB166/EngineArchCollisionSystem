@@ -7,5 +7,6 @@ Square::Square(Parameters params) :GameObject(params)
 	Renderer = params.renderer;
 	Object = params.type;
 	collider = new BoxCollider(pos.x, pos.y, width, height);
+	CollisionManager::instance()->AddCollider(collider);
 }
 

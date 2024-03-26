@@ -110,8 +110,8 @@ void Game::Update()
 	{
 		(*iter)->Update();
 	}
-	EventManager::instance()->UpdateCollisionSystem(); ///shouldnt be doing inside event manager. do in game class 
-
+	//EventManager::instance()->UpdateCollisionSystem(); ///shouldnt be doing inside event manager. do in game class 
+	CollisionManager::instance()->Update();
 	//std::cout << Time::instance()->GetDeltaTime() << std::endl;
 	
 }

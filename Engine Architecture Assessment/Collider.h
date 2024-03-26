@@ -10,6 +10,9 @@ public:
 
 	void SetColliderType(Type type);
 	Type GetColliderType();
+	bool enabled = true;
+	float* x;
+	float* y;
 private:
 	Type ColliderType;
 };
