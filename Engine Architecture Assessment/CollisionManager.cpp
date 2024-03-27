@@ -40,7 +40,11 @@ void CollisionManager::HandleCollision()
 			{
 				BoxCollider* bCol = dynamic_cast<BoxCollider*>(col);
 				BoxCollider* bCol1 = dynamic_cast<BoxCollider*>(col1);
-				SquareCollision(bCol, bCol1);
+				if (SquareCollision(bCol, bCol1))
+				{
+					bCol->callback;
+					bCol1->callback;
+				}
 			}
 			if (col->GetColliderType() == SquareCollider && col1->GetColliderType() == CircleCollider)
 			{
@@ -50,11 +54,6 @@ void CollisionManager::HandleCollision()
 
 		}
 	}
-}
-
-void CollisionManager::UpdatePositions()
-{
-	
 }
 
 void CollisionManager::Update()
@@ -79,9 +78,10 @@ void CollisionManager::Update()
 }
 
 
-void CollisionManager::AddCollider(Collider* collider, std::function<void()> func)
+void CollisionManager::AddCollider(Collider* collider)
 {
 	colliders.push_back(collider);
+	
 	std::cout << "ADDED COLLIDER TO LIST" << std::endl; 
 
 }

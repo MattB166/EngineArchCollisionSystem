@@ -19,3 +19,4 @@ Type Collider::GetColliderType()
 {
 	return Type();
 }
+

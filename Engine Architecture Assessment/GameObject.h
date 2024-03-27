@@ -45,7 +45,6 @@ public:
 	std::string getName();
 	ObjectType GetType();
 	
-	//void Observe() override;
 	void OnCollisionNotify();
 
 protected:

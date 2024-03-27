@@ -6,7 +6,8 @@ Square::Square(Parameters params) :GameObject(params)
 	SecondaryTexture = params.SecondTexture;
 	Renderer = params.renderer;
 	Object = params.type;
-	collider = new BoxCollider(pos.x, pos.y, width, height);
-	CollisionManager::instance()->AddCollider(collider,[this](){this->OnCollisionNotify();}); 
+	collider = new BoxCollider(pos.x, pos.y, width, height,std::bind(&GameObject::OnCollisionNotify,this));
+	CollisionManager::instance()->AddCollider(collider); 
+
 }
 

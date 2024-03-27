@@ -1,4 +1,5 @@
 #pragma once
+#include <functional>
 enum Type
 {
 	SquareCollider,
@@ -14,7 +15,9 @@ public:
 	bool enabled = true;
 	float* x;
 	float* y;
+	std::function<void(/*Collider*/)> callback;
 private:
 	Type ColliderType;
+	
 };
 
