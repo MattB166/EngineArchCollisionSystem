@@ -46,7 +46,7 @@ public:
 	ObjectType GetType();
 	
 	//void Observe() override;
-	void OnCollisionNotify(const GameObject& obj);
+	void OnCollisionNotify();
 
 protected:
 	void ChangeTexture();

@@ -30,7 +30,7 @@ void Circle::Draw()
 	}
 
 	
-	std::cout << "Circle X Position is:\n" << pos.x  << "Circle Y Position is:" << pos.y << std::endl;
+	//std::cout << "Circle X Position is:\n" << pos.x  << "Circle Y Position is:" << pos.y << std::endl;
 	
 }
 

@@ -4,6 +4,7 @@
 #include "BoxCollider.h"
 #include <list>
 #include <functional>
+#include <map>
 class CollisionManager   
 {
 

@@ -103,9 +103,9 @@ std::string GameObject::getName()
 //	
 //}
 
-void GameObject::OnCollisionNotify(const GameObject& obj)
+void GameObject::OnCollisionNotify()
 {
-	//change texture and reverse movement 
+	std::cout << "Calling collision" << std::endl; 
 	
 }
 

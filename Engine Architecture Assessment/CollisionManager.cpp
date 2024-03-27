@@ -64,5 +64,6 @@ void CollisionManager::AddCollider(Collider* collider, std::function<void()> fun
 {
 	colliders.push_back(collider);
 	std::cout << "ADDED COLLIDER TO LIST" << std::endl; 
+
 }
   
