@@ -30,7 +30,7 @@ struct Parameters
 //{
 //	float x, y, w, h;  ///might need to be pointers 
 //};
-class GameObject:public IObserver
+class GameObject
 {
 public:
 	GameObject(ObjectType type);
@@ -45,8 +45,8 @@ public:
 	std::string getName();
 	ObjectType GetType();
 	
-	void Observe() override;
-	//void OnCollisionNotify(const GameObject& obj) override;
+	//void Observe() override;
+	void OnCollisionNotify(const GameObject& obj);
 
 protected:
 	void ChangeTexture();

@@ -21,7 +21,7 @@ GameObject::GameObject(Parameters params)
 	
 	
 	
-	Observe();
+	//Observe();
 	
 }
 
@@ -97,17 +97,17 @@ std::string GameObject::getName()
 	return name;
 }
 
-void GameObject::Observe()
-{
-	EventManager::instance()->RegisterListener(this);
-	
-}
-
-//void GameObject::OnCollisionNotify(const GameObject& obj)
+//void GameObject::Observe()
 //{
-//	//change texture and reverse movement 
+//	EventManager::instance()->RegisterListener(this);
 //	
 //}
+
+void GameObject::OnCollisionNotify(const GameObject& obj)
+{
+	//change texture and reverse movement 
+	
+}
 
 void GameObject::ChangeTexture()
 {

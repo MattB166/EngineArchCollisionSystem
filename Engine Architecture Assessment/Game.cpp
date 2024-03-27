@@ -126,6 +126,7 @@ void Game::SpawnObjects(ObjectType type, int amount,SDL_Renderer* renderer, SDL_
 			Parameters params(FirstTexture, SecondTexture, renderer, type);
 			Square* square = new Square(params);
 			objects.push_back(square);
+			CollisionManager::instance()->AddCollider(square->collider, std::bind(&GameObject::OnCollisionNotify,&square));
 		}
 		std::cout << "Spawned " << amount << " of " << GameObject::ObjectTypeToString(type);
 	}

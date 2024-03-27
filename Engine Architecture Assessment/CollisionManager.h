@@ -3,6 +3,7 @@
 #include <iostream>
 #include "BoxCollider.h"
 #include <list>
+#include <functional>
 class CollisionManager   
 {
 
@@ -19,7 +20,7 @@ public:
 	void HandleCollision();
 	void UpdatePositions();
 	void Update();
-	void AddCollider(Collider* collider);
+	void AddCollider(Collider* collider, std::function<void()> func);
 
 private:
 	static CollisionManager* _instance;

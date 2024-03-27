@@ -9,5 +9,6 @@ public:
 	////add virtual void draw 
 	float width = 40;
 	float height = 40;
+private:
 };
 

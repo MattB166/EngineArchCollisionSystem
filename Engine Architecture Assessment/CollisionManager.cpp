@@ -59,8 +59,10 @@ void CollisionManager::Update()
 	
 }
 
-void CollisionManager::AddCollider(Collider* collider/*add function pointer here*/)
+
+void CollisionManager::AddCollider(Collider* collider, std::function<void()> func)
 {
 	colliders.push_back(collider);
 	std::cout << "ADDED COLLIDER TO LIST" << std::endl; 
 }
+  
