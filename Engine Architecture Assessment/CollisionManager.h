@@ -17,7 +17,7 @@ public:
 
 	static bool CircleRectCollision();
 
-	static bool BoundsCollision(); ////checking whether objects bouncing off walls 
+	static bool BoundsCollision();  
 	void HandleCollision();
 	void UpdatePositions();
 	void Update();
@@ -26,6 +26,6 @@ public:
 private:
 	static CollisionManager* _instance;
 	std::list<Collider*> colliders;
-	///way to generate colliders from here inside each object and set flags to whether they are active or not, so can showcase the system 
+	
 };
 

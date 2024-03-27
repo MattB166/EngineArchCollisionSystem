@@ -30,7 +30,26 @@ bool CollisionManager::BoundsCollision()
 
 void CollisionManager::HandleCollision()
 {
-	
+	for (auto it = colliders.begin(); it != colliders.end(); ++it)
+	{
+		for (auto ij = std::next(it, 1); ij != colliders.end(); ++ij)
+		{
+			Collider* col = *it;
+			Collider* col1 = *ij;
+			if (col->GetColliderType() == SquareCollider && col1->GetColliderType() == SquareCollider)
+			{
+				BoxCollider* bCol = dynamic_cast<BoxCollider*>(col);
+				BoxCollider* bCol1 = dynamic_cast<BoxCollider*>(col1);
+				SquareCollision(bCol, bCol1);
+			}
+			if (col->GetColliderType() == SquareCollider && col1->GetColliderType() == CircleCollider)
+			{
+				BoxCollider* bCol = dynamic_cast<BoxCollider*>(col);
+				///circle collider here 
+			}
+
+		}
+	}
 }
 
 void CollisionManager::UpdatePositions()
@@ -40,7 +59,7 @@ void CollisionManager::UpdatePositions()
 
 void CollisionManager::Update()
 {
-	for (auto it = colliders.begin(); it != colliders.end(); ++it)
+	/*for (auto it = colliders.begin(); it != colliders.end(); ++it)
 	{
 		Collider* col = *it;
 
@@ -54,8 +73,8 @@ void CollisionManager::Update()
 	
 		}
 
-	}
-
+	}*/
+	
 	
 }
 
