@@ -1,7 +1,14 @@
 #include "BoxCollider.h"
 
 
-
+/// <summary>
+/// Instantiation of Box Collider sets its type for the collision manager to work with, and its callback function.
+/// </summary>
+/// <param name="x"></param>
+/// <param name="y"></param>
+/// <param name="width"></param>
+/// <param name="height"></param>
+/// <param name="callback"></param>
 BoxCollider::BoxCollider(float& x, float& y, float& width, float& height, std::function<void()> callback)
 {
 	this->x = &x;

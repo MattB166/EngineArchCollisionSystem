@@ -1,5 +1,9 @@
 #include "Square.h"
 
+/// <summary>
+/// Instantiation of Square triggers creation of a new collider, which is then added to collision manager. 
+/// </summary>
+/// <param name="params"></param>
 Square::Square(Parameters params) :GameObject(params)
 {
 	MainTexture = params.texture;

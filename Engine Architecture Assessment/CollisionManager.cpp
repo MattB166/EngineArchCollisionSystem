@@ -1,21 +1,39 @@
 #include "CollisionManager.h"
 
 CollisionManager* CollisionManager::_instance = nullptr; 
+
+/// <summary>
+/// Compares two box colliders against each other for collision. If a collision has occured then true is returned.
+/// </summary>
+/// <param name="collider1"></param>
+/// <param name="Collider2"></param>
+/// <returns></returns>
 bool CollisionManager::SquareCollision(BoxCollider* collider1, BoxCollider* Collider2)
 {
 	return false;
 }
-
+/// <summary>
+/// Compares two circle colliders against each other for collision. If a collision has occured then true is returned.
+/// </summary>
+/// <returns></returns>
 bool CollisionManager::CircleCollision()
 {
 	return false;
 }
 
+/// <summary>
+/// Compares a box collider against a circle collider for collision. If a collision has occured then true is returned. 
+/// </summary>
+/// <returns></returns>
 bool CollisionManager::CircleRectCollision()
 {
 	return false;
 }
 
+/// <summary>
+/// Checks for collision between Objects and the bounds of the 2D world. If a collision has occured then true is returned. 
+/// </summary>
+/// <returns></returns>
 bool CollisionManager::BoundsCollision()
 {
 	return false;
@@ -28,6 +46,9 @@ bool CollisionManager::BoundsCollision()
 //	
 //}
 
+/// <summary>
+/// Checks between all actively set colliders to compare against each other. If any collision is detected via any method, the colliders callbacks are triggered. 
+/// </summary>
 void CollisionManager::HandleCollision()
 {
 	for (auto it = colliders.begin(); it != colliders.end(); ++it)
@@ -56,6 +77,9 @@ void CollisionManager::HandleCollision()
 	}
 }
 
+/// <summary>
+/// Called every frame to iterate through collider checks. 
+/// </summary>
 void CollisionManager::Update()
 {
 	/*for (auto it = colliders.begin(); it != colliders.end(); ++it)
@@ -78,6 +102,10 @@ void CollisionManager::Update()
 }
 
 
+/// <summary>
+/// Add a collider to the collision system list, to be checked for collisions. 
+/// </summary>
+/// <param name="collider"></param>
 void CollisionManager::AddCollider(Collider* collider)
 {
 	colliders.push_back(collider);
