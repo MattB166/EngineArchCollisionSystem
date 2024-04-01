@@ -8,15 +8,30 @@ CollisionManager* CollisionManager::_instance = nullptr;
 /// <param name="collider1"></param>
 /// <param name="Collider2"></param>
 /// <returns></returns>
-bool CollisionManager::SquareCollision(BoxCollider* collider1, BoxCollider* Collider2)
+bool CollisionManager::SquareCollision(BoxCollider* collider1, BoxCollider* collider2)
 {
-	return false;
+
+	float MinX1 = *collider1->x;
+	float MaxX1 = *collider1->x + *collider1->width;
+
+	float MinY1 = *collider1->y;
+	float MaxY1 = *collider1->y + *collider1->height;
+
+	float MinX2 = *collider2->x;
+	float MaxX2 = *collider2->x + *collider2->width;
+
+	float MinY2 = *collider2->y;	
+	float MaxY2 = *collider2->y + *collider2->height;
+
+
+
+	return MaxX1 > MinX2 && MinX1 < MaxX2 && MaxY1 > MinY2 && MinY1 < MaxY2;
 }
 /// <summary>
 /// Compares two circle colliders against each other for collision. If a collision has occured then true is returned.
 /// </summary>
 /// <returns></returns>
-bool CollisionManager::CircleCollision()
+bool CollisionManager::CircleCollision(CircleCollider* collider1, CircleCollider* collider2)
 {
 	return false;
 }
@@ -25,7 +40,7 @@ bool CollisionManager::CircleCollision()
 /// Compares a box collider against a circle collider for collision. If a collision has occured then true is returned. 
 /// </summary>
 /// <returns></returns>
-bool CollisionManager::CircleRectCollision()
+bool CollisionManager::CircleRectCollision(CircleCollider* circ, BoxCollider* box)
 {
 	return false;
 }
@@ -63,14 +78,33 @@ void CollisionManager::HandleCollision()
 				BoxCollider* bCol1 = dynamic_cast<BoxCollider*>(col1);
 				if (SquareCollision(bCol, bCol1))
 				{
-					bCol->callback;
-					bCol1->callback;
+					std::cout << "COLLISION DETECTED" << std::endl;	
+					bCol->callback();
+					bCol1->callback();
 				}
 			}
-			if (col->GetColliderType() == SquareCollider && col1->GetColliderType() == CircleCollider)
+			if (col->GetColliderType() == SquareCollider && col1->GetColliderType() == CircCollider)
 			{
 				BoxCollider* bCol = dynamic_cast<BoxCollider*>(col);
+				CircleCollider* cCol = dynamic_cast<CircleCollider*>(col1); 
+				if (CircleRectCollision(cCol, bCol))
+				{
+
+					bCol->callback();
+					cCol->callback();
+				}
+				
 				///circle collider here 
+			}
+			if (col->GetColliderType() == CircCollider && col1->GetColliderType() == CircCollider)
+			{
+				CircleCollider* cCol = dynamic_cast<CircleCollider*>(col);
+				CircleCollider* cCol1 = dynamic_cast<CircleCollider*>(col1);
+				if (CircleCollision(cCol, cCol1))
+				{
+					cCol->callback();
+					cCol1->callback();
+				}
 			}
 
 		}
@@ -82,21 +116,7 @@ void CollisionManager::HandleCollision()
 /// </summary>
 void CollisionManager::Update()
 {
-	/*for (auto it = colliders.begin(); it != colliders.end(); ++it)
-	{
-		Collider* col = *it;
-
-		if (col->GetColliderType() == SquareCollider)
-		{
-			BoxCollider* bCol = dynamic_cast<BoxCollider*>(col); ///i have downcasted to get access to their derived classes.
-			
-			///now need to compare against all other colliders and move the iterator up 
-
-			                                                 
-	
-		}
-
-	}*/
+	HandleCollision();
 	
 	
 }

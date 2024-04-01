@@ -106,6 +106,7 @@ std::string GameObject::getName()
 void GameObject::OnCollisionNotify()
 {
 	std::cout << "Calling collision" << std::endl; 
+	ChangeTexture();
 	
 }
 
@@ -161,7 +162,7 @@ void GameObject::RandomMovement(float deltaTime)//take delta time as a float
 		if (Vector2::Distance(pos, movePos) < arrivalThreshold)
 		{
 			arrived = true;
-			ChangeTexture();
+			//ChangeTexture();
 		}
 	}
 	

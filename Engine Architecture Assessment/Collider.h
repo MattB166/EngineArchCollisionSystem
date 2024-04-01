@@ -3,7 +3,7 @@
 enum Type
 {
 	SquareCollider,
-	CircleCollider
+	CircCollider,
 };
 class Collider
 {
@@ -15,7 +15,7 @@ public:
 	bool enabled = true;
 	float* x;
 	float* y;
-	std::function<void(/*Collider*/)> callback;
+	std::function<void()> callback;
 private:
 	Type ColliderType;
 	
