@@ -26,7 +26,7 @@ void Game::Run()
 	SDL_SetRenderTarget(g_sdlRenderer, NULL);
 	
 	SpawnObjects(ObjectType::ShapeSquare, 3,g_sdlRenderer, MagicTexture,SecondTexture);
-	SpawnObjects(ObjectType::ShapeCircle, 1, g_sdlRenderer, MagicTexture, SecondTexture);
+	SpawnObjects(ObjectType::ShapeCircle, 2, g_sdlRenderer, MagicTexture, SecondTexture);
 	
 	isRunning = true;
 	

@@ -7,6 +7,10 @@ Circle::Circle(Parameters params, CircleParameters param)
 	Renderer = params.renderer;
 	Object = params.type;
 	radius = param.radius;
+	SetObjectPosition();
+	collider = new CircleCollider(pos.x, pos.y, radius, std::bind(&GameObject::OnCollisionNotify, this));
+	CollisionManager::instance()->AddCollider(collider);
+
 }
 
 void Circle::Draw()

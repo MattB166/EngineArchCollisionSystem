@@ -4,9 +4,9 @@ class CircleCollider : public Collider
 {
 public:
 		CircleCollider(float& x, float& y, float& radius, std::function<void()> callback);
-
+		float* radius;
 private:
-	float* radius;
+	
 	/*float* x;
 		float* y;*/
 };

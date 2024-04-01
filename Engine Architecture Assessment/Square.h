@@ -5,7 +5,7 @@ class Square : public GameObject
 {
 public:
 	Square(Parameters params);
-	BoxCollider* collider = nullptr; 
+	BoxCollider* collider  =nullptr; 
 	
 	float width = 40;
 	float height = 40;

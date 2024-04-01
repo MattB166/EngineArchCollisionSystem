@@ -11,6 +11,11 @@ CollisionManager* CollisionManager::_instance = nullptr;
 bool CollisionManager::SquareCollision(BoxCollider* collider1, BoxCollider* collider2)
 {
 
+	if (collider1->x == nullptr || collider1->y == nullptr || collider1->width == nullptr || collider1->height == nullptr)
+	{
+		return false; 
+	}
+
 	float MinX1 = *collider1->x;
 	float MaxX1 = *collider1->x + *collider1->width;
 
@@ -33,7 +38,17 @@ bool CollisionManager::SquareCollision(BoxCollider* collider1, BoxCollider* coll
 /// <returns></returns>
 bool CollisionManager::CircleCollision(CircleCollider* collider1, CircleCollider* collider2)
 {
+	float dx = *collider1->x - *collider2->x;
+	float dy = *collider1->y - *collider2->y;
+	float distance = sqrt((dx * dx) + (dy * dy));
+
+	if (distance < *collider1->radius + *collider2->radius)
+	{
+		return true;
+	}
+	else
 	return false;
+	
 }
 
 /// <summary>
@@ -76,6 +91,10 @@ void CollisionManager::HandleCollision()
 			{
 				BoxCollider* bCol = dynamic_cast<BoxCollider*>(col);
 				BoxCollider* bCol1 = dynamic_cast<BoxCollider*>(col1);
+				if (bCol == nullptr || bCol1 == nullptr)
+				{
+					continue;
+				}
 				if (SquareCollision(bCol, bCol1))
 				{
 					std::cout << "COLLISION DETECTED" << std::endl;	
@@ -87,6 +106,10 @@ void CollisionManager::HandleCollision()
 			{
 				BoxCollider* bCol = dynamic_cast<BoxCollider*>(col);
 				CircleCollider* cCol = dynamic_cast<CircleCollider*>(col1); 
+				if (bCol == nullptr || cCol == nullptr)
+				{
+					continue;
+				}
 				if (CircleRectCollision(cCol, bCol))
 				{
 
