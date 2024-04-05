@@ -65,7 +65,8 @@ void GameObject::Update()
 {
 	
 	Draw();
-	RandomMovement(Time::instance()->GetDeltaTime()); ///works but its absolutely mental atm. need speed and delta time 
+	Movement(Time::instance()->GetDeltaTime()); ///works but its absolutely mental atm. need speed and delta time 
+
 }
 ObjectType GameObject::GetType()
 {
@@ -103,12 +104,13 @@ std::string GameObject::getName()
 //	
 //}
 
-void GameObject::OnCollisionNotify()
+void GameObject::OnCollisionNotify(Collider* col)
 {
-	std::cout << "Calling collision" << std::endl; 
+	//std::cout << "Calling collision" << std::endl; 
 	ChangeTexture();
-	
+	arrived = true;      //////this method does work but can cause some issues with the movement method. when 2 objects collide they both stop moving if chosen opposite direction from opposite side. 
 }
+
 
 void GameObject::ChangeTexture()
 {
@@ -136,10 +138,10 @@ void GameObject::SetObjectPosition()
 	pos.x = randX;
 	pos.y = randY; 
 
-	//std::cout << "X Position is: " << randX << "And Y Position is: " << randY << std::endl; 
+	
 }
 
-void GameObject::RandomMovement(float deltaTime)//take delta time as a float 
+void GameObject::Movement(float deltaTime)
 {
 	if (!movementStopped)
 	{
@@ -162,9 +164,18 @@ void GameObject::RandomMovement(float deltaTime)//take delta time as a float
 		if (Vector2::Distance(pos, movePos) < arrivalThreshold)
 		{
 			arrived = true;
-			//ChangeTexture();
+			
 		}
 	}
+	/*else
+	{
+		pos = Vector2::MoveTowards(pos, movePos, speed * deltaTime);
+		if (Vector2::Distance(pos, movePos) < 0.05f)
+		{
+			movementStopped = false;
+		}
+	}*/
+
 	
 
 }

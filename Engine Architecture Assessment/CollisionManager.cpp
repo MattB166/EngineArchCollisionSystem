@@ -97,9 +97,9 @@ void CollisionManager::HandleCollision()
 				}
 				if (SquareCollision(bCol, bCol1))
 				{
-					std::cout << "COLLISION DETECTED" << std::endl;	
-					bCol->callback();
-					bCol1->callback();
+					//std::cout << "COLLISION DETECTED" << std::endl;	
+					bCol->callback(bCol1);
+					bCol1->callback(bCol);
 				}
 			}
 			if (col->GetColliderType() == SquareCollider && col1->GetColliderType() == CircCollider)
@@ -113,8 +113,8 @@ void CollisionManager::HandleCollision()
 				if (CircleRectCollision(cCol, bCol))
 				{
 
-					bCol->callback();
-					cCol->callback();
+					bCol->callback(cCol);
+					cCol->callback(bCol);
 				}
 				
 				///circle collider here 
@@ -125,8 +125,8 @@ void CollisionManager::HandleCollision()
 				CircleCollider* cCol1 = dynamic_cast<CircleCollider*>(col1);
 				if (CircleCollision(cCol, cCol1))
 				{
-					cCol->callback();
-					cCol1->callback();
+					cCol->callback(cCol1);
+					cCol1->callback(cCol);
 				}
 			}
 

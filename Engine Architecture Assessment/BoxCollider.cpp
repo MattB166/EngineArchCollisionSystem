@@ -9,7 +9,7 @@
 /// <param name="width"></param>
 /// <param name="height"></param>
 /// <param name="callback"></param>
-BoxCollider::BoxCollider(float& x, float& y, float& width, float& height, std::function<void()> callback)
+BoxCollider::BoxCollider(float& x, float& y, float& width, float& height, std::function<void(Collider* col)> callback)
 {
 	this->x = &x;
 	this->y = &y;

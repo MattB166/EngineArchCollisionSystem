@@ -45,13 +45,12 @@ public:
 	std::string getName();
 	ObjectType GetType();
 	
-	void OnCollisionNotify();
-
+	void OnCollisionNotify(Collider* col);
 protected:
 	void ChangeTexture();
 	virtual void Draw();
 	void SetObjectPosition();
-	void RandomMovement(float deltaTime);
+	void Movement(float deltaTime);
 	
 	std::string name;
 	ObjectType Object; 

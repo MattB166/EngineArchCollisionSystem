@@ -10,7 +10,7 @@ Square::Square(Parameters params) :GameObject(params)
 	SecondaryTexture = params.SecondTexture;
 	Renderer = params.renderer;
 	Object = params.type;
-	collider = new BoxCollider(pos.x, pos.y, width, height,std::bind(&GameObject::OnCollisionNotify,this));
+	collider = new BoxCollider(pos.x, pos.y, width, height,std::bind(&GameObject::OnCollisionNotify,this,std::placeholders::_1));
 	CollisionManager::instance()->AddCollider(collider); 
 
 }

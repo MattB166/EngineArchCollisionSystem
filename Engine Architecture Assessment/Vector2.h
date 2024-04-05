@@ -11,6 +11,9 @@ public:
 
 	Vector2 operator/(float scalar) const;
 	Vector2 operator*(float scalar) const;
+	Vector2 operator*= (float scalar);
+	Vector2 operator-() const;
+	
 	static const Vector2 Down;
 	static const Vector2 Left;
 	static const Vector2 Right;

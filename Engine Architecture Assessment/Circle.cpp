@@ -8,7 +8,7 @@ Circle::Circle(Parameters params, CircleParameters param)
 	Object = params.type;
 	radius = param.radius;
 	SetObjectPosition();
-	collider = new CircleCollider(pos.x, pos.y, radius, std::bind(&GameObject::OnCollisionNotify, this));
+	collider = new CircleCollider(pos.x, pos.y, radius, std::bind(&GameObject::OnCollisionNotify, this,std::placeholders::_1));
 	CollisionManager::instance()->AddCollider(collider);
 
 }

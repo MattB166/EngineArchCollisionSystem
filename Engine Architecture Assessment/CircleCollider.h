@@ -3,7 +3,7 @@
 class CircleCollider : public Collider
 {
 public:
-		CircleCollider(float& x, float& y, float& radius, std::function<void()> callback);
+		CircleCollider(float& x, float& y, float& radius, std::function<void(Collider* col)> callback);
 		float* radius;
 private:
 	

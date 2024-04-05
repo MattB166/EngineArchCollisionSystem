@@ -81,6 +81,16 @@ Vector2 Vector2::operator*(float scalar) const
 		return Vector2::Zero;
 	}
 }
+Vector2 Vector2::operator*=(float scalar)
+{
+	x *= scalar;
+	y *= scalar;
+	return *this;
+}
+Vector2 Vector2::operator-() const
+{
+	return Vector2(-x ,- y);
+}
 Vector2::Vector2()
 {
 	x = 0;
@@ -117,7 +127,13 @@ void Vector2::SetPosition(float x, float y)
 Vector2 Vector2::Normalize()
 {
 	float mag = GetMagnitude();
-	return { x / mag, y / mag };
+
+	if (mag != 0)
+	{
+		x /= mag;
+		y /= mag;
+	}
+	return *this;
 }
 
 float Vector2::GetMagnitude()
