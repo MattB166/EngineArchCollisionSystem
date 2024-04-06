@@ -38,7 +38,7 @@ void Circle::Draw()
 	
 }
 
-CircleParameters::CircleParameters(int32_t radius)
+CircleParameters::CircleParameters(float radius)
 {
 	this->radius = radius;
 }

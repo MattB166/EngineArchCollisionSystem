@@ -3,9 +3,9 @@
 #include "CircleCollider.h"
 struct CircleParameters
 {
-	int32_t radius;
+	float radius;
 
-	CircleParameters(int32_t radius);
+	CircleParameters(float radius);
 };
 class Circle:public GameObject
 {
