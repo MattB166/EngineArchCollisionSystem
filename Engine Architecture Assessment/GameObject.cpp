@@ -109,6 +109,7 @@ void GameObject::OnCollisionNotify(Collider* col)
 	//std::cout << "Calling collision" << std::endl; 
 	ChangeTexture();
 	arrived = true;      //////this method does work but can cause some issues with the movement method. when 2 objects collide they both stop moving if chosen opposite direction from opposite side. 
+	movementStopped = true;
 }
 
 
@@ -143,6 +144,8 @@ void GameObject::SetObjectPosition()
 
 void GameObject::Movement(float deltaTime)
 {
+	static const float reverseDuration = 1.0f;
+	static float reverseTime = 0.0f;
 	if (!movementStopped)
 	{
 		static const float arrivalThreshold = 0.5f;
@@ -152,14 +155,18 @@ void GameObject::Movement(float deltaTime)
 			int randX = rand() % 800 + 1;
 			int randY = rand() % 600 + 1;
 			movePos = Vector2(randX, randY);
-			std::cout << "New Dest is: " << movePos.x << " : " << movePos.y << std::endl;
+			//std::cout << "New Dest is: " << movePos.x << " : " << movePos.y << std::endl;
 			arrived = false;
 		}
 
 		//pos.x += 5;
 		pos = Vector2::MoveTowards(pos, movePos, speed * deltaTime);///need proper arrival check, speed and delta time for this to work better, as well as only setting
 		
-		
+		if(pos.x > 800 - (width/2) || pos.x < 0 + (width/2) || pos.y > 600 - (height/2)|| pos.y < 0 + (height/2))
+		{
+			//pos = Vector2::MoveTowards(pos, movePos, speed * deltaTime);
+			arrived = true;
+		}
 		// new position when reached the old one 
 		if (Vector2::Distance(pos, movePos) < arrivalThreshold)
 		{
@@ -167,14 +174,19 @@ void GameObject::Movement(float deltaTime)
 			
 		}
 	}
-	/*else
+	else
 	{
-		pos = Vector2::MoveTowards(pos, movePos, speed * deltaTime);
-		if (Vector2::Distance(pos, movePos) < 0.05f)
+		pos = Vector2::MoveTowards(pos, movePos, -speed * deltaTime);
+
+		reverseTime += deltaTime;
+		if (reverseTime >= reverseDuration)
 		{
 			movementStopped = false;
+			reverseTime = 0.0f;
 		}
-	}*/
+
+
+	}
 
 	
 

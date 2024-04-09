@@ -3,60 +3,76 @@
   "WorkspaceRootPath": "C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\Circle.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|solutionrelative:Circle.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\GameObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|solutionrelative:GameObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\GameObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|solutionrelative:GameObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\Circle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|solutionrelative:Circle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\Circle.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|solutionrelative:Circle.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\CollisionManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|solutionrelative:CollisionManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\Collider.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|solutionrelative:Collider.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\Square.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|solutionrelative:Square.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\IObserver.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|solutionrelative:IObserver.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\Game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|solutionrelative:Game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\EventManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|solutionrelative:EventManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\Collider.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|solutionrelative:Collider.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\CollisionManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|solutionrelative:CollisionManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|solutionrelative:Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\Circle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|solutionrelative:Circle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\CircleCollider.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|solutionrelative:CircleCollider.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\Square.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|solutionrelative:Square.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\Square.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|solutionrelative:Square.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\CircleCollider.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|solutionrelative:CircleCollider.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\Game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|solutionrelative:Game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\IObserver.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|solutionrelative:IObserver.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\EventManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|solutionrelative:EventManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\BoxCollider.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|solutionrelative:BoxCollider.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\Collider.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|solutionrelative:Collider.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\Time.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|solutionrelative:Time.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\GameObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|solutionrelative:GameObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\Vector2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -67,28 +83,12 @@
       "RelativeMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|solutionrelative:Vector2.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\CollisionManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|solutionrelative:CollisionManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\BoxCollider.cpp||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|solutionrelative:BoxCollider.cpp||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\Square.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|solutionrelative:Square.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\EventManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|solutionrelative:EventManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\CircleCollider.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|solutionrelative:CircleCollider.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|solutionrelative:Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FAAA0B2A-6784-4AF3-BA49-AC86220266C0}|Engine Architecture Assessment.vcxproj|C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\IObserver.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -113,11 +113,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 15,
+          "SelectedChildIndex": 13,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 17,
               "Title": "Time.h",
               "DocumentMoniker": "C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\Time.h",
               "RelativeDocumentMoniker": "Time.h",
@@ -125,12 +125,11 @@
               "RelativeToolTip": "Time.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-04-06T11:02:19.561Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-06T11:02:19.561Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 18,
               "Title": "Vector2.cpp",
               "DocumentMoniker": "C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\Vector2.cpp",
               "RelativeDocumentMoniker": "Vector2.cpp",
@@ -142,7 +141,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 9,
               "Title": "CircleCollider.cpp",
               "DocumentMoniker": "C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\CircleCollider.cpp",
               "RelativeDocumentMoniker": "CircleCollider.cpp",
@@ -150,11 +149,12 @@
               "RelativeToolTip": "CircleCollider.cpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-04-01T12:43:52.218Z"
+              "WhenOpened": "2024-04-01T12:43:52.218Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "CircleCollider.h",
               "DocumentMoniker": "C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\CircleCollider.h",
               "RelativeDocumentMoniker": "CircleCollider.h",
@@ -167,7 +167,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 16,
               "Title": "BoxCollider.h",
               "DocumentMoniker": "C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\BoxCollider.h",
               "RelativeDocumentMoniker": "BoxCollider.h",
@@ -175,37 +175,37 @@
               "RelativeToolTip": "BoxCollider.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-03-27T17:59:58.036Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-27T17:59:58.036Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 6,
               "Title": "CollisionManager.h",
               "DocumentMoniker": "C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\CollisionManager.h",
               "RelativeDocumentMoniker": "CollisionManager.h",
               "ToolTip": "C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\CollisionManager.h",
               "RelativeToolTip": "CollisionManager.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAYAAAA",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAawBgAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-03-27T17:21:57.562Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 3,
               "Title": "CollisionManager.cpp",
               "DocumentMoniker": "C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\CollisionManager.cpp",
               "RelativeDocumentMoniker": "CollisionManager.cpp",
               "ToolTip": "C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\CollisionManager.cpp",
               "RelativeToolTip": "CollisionManager.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAHYAAAAEAAAA",
+              "ViewState": "AQIAAEYAAAAAAAAAAAAawHgAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-03-27T17:21:57.592Z"
+              "WhenOpened": "2024-03-27T17:21:57.592Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "BoxCollider.cpp",
               "DocumentMoniker": "C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\BoxCollider.cpp",
               "RelativeDocumentMoniker": "BoxCollider.cpp",
@@ -217,20 +217,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "Circle.cpp",
               "DocumentMoniker": "C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\Circle.cpp",
               "RelativeDocumentMoniker": "Circle.cpp",
               "ToolTip": "C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\Circle.cpp",
               "RelativeToolTip": "Circle.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACYAAAABAAAA",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAcwCIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-03-27T17:21:57.671Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 5,
               "Title": "Collider.h",
               "DocumentMoniker": "C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\Collider.h",
               "RelativeDocumentMoniker": "Collider.h",
@@ -243,28 +243,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Collider.cpp",
               "DocumentMoniker": "C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\Collider.cpp",
               "RelativeDocumentMoniker": "Collider.cpp",
               "ToolTip": "C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\Collider.cpp",
               "RelativeToolTip": "Collider.cpp",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAawB4AAAARAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-03-27T17:21:57.677Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 10,
               "Title": "Square.cpp",
               "DocumentMoniker": "C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\Square.cpp",
               "RelativeDocumentMoniker": "Square.cpp",
               "ToolTip": "C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\Square.cpp",
               "RelativeToolTip": "Square.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-03-27T17:21:57.55Z"
+              "WhenOpened": "2024-03-27T17:21:57.55Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -274,20 +275,20 @@
               "RelativeDocumentMoniker": "GameObject.h",
               "ToolTip": "C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\GameObject.h",
               "RelativeToolTip": "GameObject.h",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAABkAAAACAAAA",
+              "ViewState": "AQIAABQAAAAAAAAAAADgvy8AAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-03-27T17:21:57.674Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 0,
               "Title": "GameObject.cpp",
               "DocumentMoniker": "C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\GameObject.cpp",
               "RelativeDocumentMoniker": "GameObject.cpp",
               "ToolTip": "C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\GameObject.cpp",
               "RelativeToolTip": "GameObject.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAHYAAAAdAAAA",
+              "ViewState": "AQIAAGwAAAAAAAAAAAAWwHgAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-03-27T17:21:57.671Z",
               "EditorCaption": ""
@@ -306,46 +307,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Circle.h",
               "DocumentMoniker": "C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\Circle.h",
               "RelativeDocumentMoniker": "Circle.h",
               "ToolTip": "C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\Circle.h",
               "RelativeToolTip": "Circle.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-03-27T17:21:57.673Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 11,
               "Title": "Square.h",
               "DocumentMoniker": "C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\Square.h",
               "RelativeDocumentMoniker": "Square.h",
               "ToolTip": "C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\Square.h",
               "RelativeToolTip": "Square.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-03-27T17:21:57.561Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 13,
               "Title": "Game.h",
               "DocumentMoniker": "C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\Game.h",
               "RelativeDocumentMoniker": "Game.h",
               "ToolTip": "C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\Game.h",
               "RelativeToolTip": "Game.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-03-27T17:21:57.675Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 19,
               "Title": "Vector2.h",
               "DocumentMoniker": "C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\Vector2.h",
               "RelativeDocumentMoniker": "Vector2.h",
@@ -357,7 +358,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 14,
               "Title": "IObserver.h",
               "DocumentMoniker": "C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\IObserver.h",
               "RelativeDocumentMoniker": "IObserver.h",
@@ -365,24 +366,24 @@
               "RelativeToolTip": "IObserver.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-03-27T17:21:57.67Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-27T17:21:57.67Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 7,
               "Title": "Game.cpp",
               "DocumentMoniker": "C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\Game.cpp",
               "RelativeDocumentMoniker": "Game.cpp",
               "ToolTip": "C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\Game.cpp",
               "RelativeToolTip": "Game.cpp",
-              "ViewState": "AQIAAFQAAAAAAAAAAAAAAB0AAAABAAAA",
+              "ViewState": "AQIAAFcAAAAAAAAAAAAAAHIAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-03-27T17:21:57.669Z"
+              "WhenOpened": "2024-03-27T17:21:57.669Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 15,
               "Title": "EventManager.h",
               "DocumentMoniker": "C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\EventManager.h",
               "RelativeDocumentMoniker": "EventManager.h",
@@ -390,8 +391,7 @@
               "RelativeToolTip": "EventManager.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-03-27T17:21:57.668Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-27T17:21:57.668Z"
             },
             {
               "$type": "Document",
@@ -419,7 +419,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "EventManager.cpp",
               "DocumentMoniker": "C:\\Users\\Matth\\Documents\\UNI WORK\\Actual Year 2\\Engine Architecture\\EngineArchCollisionSystem\\Engine Architecture Assessment\\EventManager.cpp",
               "RelativeDocumentMoniker": "EventManager.cpp",

@@ -15,3 +15,8 @@ Square::Square(Parameters params) :GameObject(params)
 
 }
 
+Square::~Square()
+{
+	delete collider;
+}
+

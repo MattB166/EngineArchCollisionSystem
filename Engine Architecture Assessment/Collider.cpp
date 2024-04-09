@@ -17,7 +17,7 @@ void Collider::SetColliderType(Type type)
 
 Type Collider::GetColliderType()
 {
-	return Type();
+	return ColliderType;
 }
 
 void Collider::SetPosition(Vector2 pos)

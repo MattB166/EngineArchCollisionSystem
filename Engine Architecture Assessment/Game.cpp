@@ -26,7 +26,7 @@ void Game::Run()
 	SDL_SetRenderTarget(g_sdlRenderer, NULL);
 	
 	SpawnObjects(ObjectType::ShapeSquare, 3,g_sdlRenderer, MagicTexture,SecondTexture);
-	SpawnObjects(ObjectType::ShapeCircle, 2, g_sdlRenderer, MagicTexture, SecondTexture);
+	SpawnObjects(ObjectType::ShapeCircle, 3, g_sdlRenderer, MagicTexture, SecondTexture);
 	
 	isRunning = true;
 	
@@ -127,7 +127,7 @@ void Game::SpawnObjects(ObjectType type, int amount,SDL_Renderer* renderer, SDL_
 			Square* square = new Square(params);
 			objects.push_back(square);
 		}
-		std::cout << "Spawned " << amount << " of " << GameObject::ObjectTypeToString(type) << std::endl;
+		//std::cout << "Spawned " << amount << " of " << GameObject::ObjectTypeToString(type) << std::endl;
 	}
 	else if (type == ShapeCircle)
 	{
@@ -138,7 +138,7 @@ void Game::SpawnObjects(ObjectType type, int amount,SDL_Renderer* renderer, SDL_
 			Circle* circle = new Circle(params, param);
 			objects.push_back(circle);
 		}
-		std::cout << "Spawned " << amount << " of " << GameObject::ObjectTypeToString(type) << std::endl;
+		//std::cout << "Spawned " << amount << " of " << GameObject::ObjectTypeToString(type) << std::endl;
 	}
 	
 

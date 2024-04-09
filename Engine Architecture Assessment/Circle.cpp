@@ -13,6 +13,11 @@ Circle::Circle(Parameters params, CircleParameters param)
 
 }
 
+Circle::~Circle()
+{
+	delete collider;
+}
+
 void Circle::Draw()
 {
 	//Vector2 ObjectCentre = pos + Vector2(width / 2, height / 2);
@@ -34,7 +39,7 @@ void Circle::Draw()
 	}
 
 	
-	//std::cout << "Circle X Position is:\n" << pos.x  << "Circle Y Position is:" << pos.y << std::endl;
+	//std::cout << "Circle X Position is: " << pos.x  << "Circle Y Position is:" << pos.y << std::endl;
 	
 }
 
