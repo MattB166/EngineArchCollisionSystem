@@ -43,6 +43,7 @@ void Circle::Draw()
 	
 }
 
+
 CircleParameters::CircleParameters(float radius)
 {
 	this->radius = radius;

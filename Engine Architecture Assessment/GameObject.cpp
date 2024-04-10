@@ -144,7 +144,7 @@ void GameObject::SetObjectPosition()
 
 void GameObject::Movement(float deltaTime)
 {
-	static const float reverseDuration = 1.0f;
+	static const float reverseDuration = 3.0f;
 	static float reverseTime = 0.0f;
 	if (!movementStopped)
 	{
@@ -162,7 +162,7 @@ void GameObject::Movement(float deltaTime)
 		//pos.x += 5;
 		pos = Vector2::MoveTowards(pos, movePos, speed * deltaTime);///need proper arrival check, speed and delta time for this to work better, as well as only setting
 		
-		if(pos.x > 800 - (width/2) || pos.x < 0 + (width/2) || pos.y > 600 - (height/2)|| pos.y < 0 + (height/2))
+		if(pos.x + (width / 2) > 800 || pos.x - (width / 2) < 0 || pos.y + (height / 2) > 600 || pos.y - (height / 2) < 0)
 		{
 			//pos = Vector2::MoveTowards(pos, movePos, speed * deltaTime);
 			arrived = true;

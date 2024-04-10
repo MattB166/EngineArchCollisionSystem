@@ -134,7 +134,7 @@ void Game::SpawnObjects(ObjectType type, int amount,SDL_Renderer* renderer, SDL_
 		for (int i = 0; i < amount; ++i)
 		{
 			Parameters params(FirstTexture, SecondTexture, renderer, type);
-			CircleParameters param(30);
+			CircleParameters param(50);
 			Circle* circle = new Circle(params, param);
 			objects.push_back(circle);
 		}

@@ -41,9 +41,9 @@ bool CollisionManager::CircleCollision(CircleCollider* collider1, CircleCollider
 	float dx = *collider1->x - *collider2->x;
 	float dy = *collider1->y - *collider2->y;
 	float distance = sqrt((dx * dx) + (dy * dy));
-	std::cout << "Distance: " << distance << std::endl;
-	std::cout << "Radius 1: " << *collider1->radius << std::endl;
-	std::cout << "Radius 2: " << *collider2->radius << std::endl;
+	//std::cout << "Distance: " << distance << std::endl;
+	//std::cout << "Radius 1: " << *collider1->radius << std::endl;
+	//std::cout << "Radius 2: " << *collider2->radius << std::endl;
 	if (distance <= *collider1->radius + *collider2->radius)
 	{
 		return true;
@@ -100,19 +100,19 @@ void CollisionManager::HandleCollision()
 				}
 				else if (SquareCollision(bCol, bCol1))
 				{
-					std::cout << "COLLISION DETECTED" << std::endl;
+					//std::cout << "COLLISION DETECTED" << std::endl;
 					bCol->callback(bCol1);
 					bCol1->callback(bCol);
 				}
 			}
 			 if (col->GetColliderType() == SquareCollider && col1->GetColliderType() == CircCollider)
 			{
-				std::cout << "FOUND SQUARE AND CIRCLE COLLIDER" << std::endl;
+				//std::cout << "FOUND SQUARE AND CIRCLE COLLIDER" << std::endl;
 				BoxCollider* bCol = dynamic_cast<BoxCollider*>(col);
 				CircleCollider* cCol = dynamic_cast<CircleCollider*>(col1);
 				if (bCol == nullptr || cCol == nullptr)
 				{
-					std::cout << "NULLPTR" << std::endl;
+					//std::cout << "NULLPTR" << std::endl;
 					continue;
 				}
 				else if (CircleRectCollision(cCol, bCol))
@@ -120,19 +120,19 @@ void CollisionManager::HandleCollision()
 
 					bCol->callback(cCol);
 					cCol->callback(bCol);
-					std::cout << "Circle Rect Collision Detected" << std::endl;
+					//std::cout << "Circle Rect Collision Detected" << std::endl;
 				}
 
 				///circle collider here 
 			}
 			 if (col->GetColliderType() == CircCollider && col1->GetColliderType() == CircCollider)
 			{
-				std::cout << "FOUND CIRCLE AND CIRCLE COLLIDER" << std::endl;
+				//std::cout << "FOUND CIRCLE AND CIRCLE COLLIDER" << std::endl;
 				CircleCollider* cCol = dynamic_cast<CircleCollider*>(col);
 				CircleCollider* cCol1 = dynamic_cast<CircleCollider*>(col1);
 				if (cCol == nullptr || cCol1 == nullptr)
 				{
-					std::cout << "NULLPTR" << std::endl;
+					//std::cout << "NULLPTR" << std::endl;
 					continue;
 				}
 				else if (CircleCollision(cCol, cCol1))
