@@ -45,9 +45,9 @@ public:
 	std::string getName();
 	ObjectType GetType();
 	
-    void ChangeTexture();
 	void OnCollisionNotify(Collider* col);
 protected:
+    virtual void ChangeTexture();
 	virtual void Draw();
 	void SetObjectPosition();
 	void Movement(float deltaTime);

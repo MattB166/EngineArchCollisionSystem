@@ -59,6 +59,32 @@ bool CollisionManager::CircleCollision(CircleCollider* collider1, CircleCollider
 /// <returns></returns>
 bool CollisionManager::CircleRectCollision(CircleCollider* circ, BoxCollider* box)
 {
+	float cx = *circ->x;
+	float cy = *circ->y;
+	float radius = *circ->radius;
+
+	float rx = *box->x;
+	float ry = *box->y;
+	float rw = *box->width;
+	float rh = *box->height;
+
+	float testX = cx;
+	float testY = cy;
+
+	if (cx < rx) testX = rx;
+	else if (cx > rx + rw) testX = rx + rw;
+	if (cy < ry) testY = ry;
+	else if (cy > ry + rh) testY = ry + rh;
+
+	float distX = cx - testX;
+	float distY = cy - testY;
+	float distance = sqrt((distX * distX) + (distY * distY));
+
+	if (distance <= radius)
+	{
+		std::cout << "Square/circ collision detected" << std::endl;
+		return true;
+	}
 	return false;
 }
 
