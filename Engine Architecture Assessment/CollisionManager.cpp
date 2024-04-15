@@ -1,11 +1,8 @@
 #include "CollisionManager.h"
 
-CollisionManager* CollisionManager::_instance = nullptr;
+//CollisionManager* CollisionManager::_instance = nullptr;
+std::list<Collider*> CollisionManager::colliders;
 
-/// @brief Compares two square colliders against each other for collision. If a collision has occured then true is returned.
-/// @param collider1 
-/// @param collider2 
-/// @return 
 bool CollisionManager::SquareCollision(BoxCollider* collider1, BoxCollider* collider2)
 {
 
@@ -30,10 +27,7 @@ bool CollisionManager::SquareCollision(BoxCollider* collider1, BoxCollider* coll
 
 	return MaxX1 > MinX2 && MinX1 < MaxX2 && MaxY1 > MinY2 && MinY1 < MaxY2;
 }
-/// @brief Compares two circle colliders against each other for collision. If a collision occurs then true is returned.
-/// @param collider1 
-/// @param collider2 
-/// @return 
+
 bool CollisionManager::CircleCollision(CircleCollider* collider1, CircleCollider* collider2)
 {
 	float dx = *collider1->x - *collider2->x;
@@ -50,10 +44,7 @@ bool CollisionManager::CircleCollision(CircleCollider* collider1, CircleCollider
 
 }
 
-/// @brief Compares a circle collider against a box collider for collision. If a collision occurs then true is returned.
-/// @param circ 
-/// @param box 
-/// @return 
+
 bool CollisionManager::CircleRectCollision(CircleCollider* circ, BoxCollider* box)
 {
 	float circleX = *circ->x;
@@ -93,7 +84,6 @@ bool CollisionManager::BoundsCollision()
 }
 
 
-/// @brief Iterates through all colliders in the list as pairs. Compares the collider type of nth and n+1 and carries out the relevant collision check between them. 
 void CollisionManager::HandleCollision()
 {
 	for (auto it = colliders.begin(); it != colliders.end(); ++it)
@@ -160,7 +150,7 @@ void CollisionManager::HandleCollision()
 	}
 }
 
-/// @brief Ticks over the handle collision function 
+
 void CollisionManager::Update()
 {
 	HandleCollision();
@@ -169,8 +159,7 @@ void CollisionManager::Update()
 }
 
 
-/// @brief Adds a collider object to the Collision Manager collider list. 
-/// @param collider 
+
 void CollisionManager::AddCollider(Collider* collider)
 {
 	colliders.push_back(collider);

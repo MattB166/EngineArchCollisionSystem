@@ -6,25 +6,46 @@
 #include <list>
 #include <functional>
 #include <map>
+
+/// @brief Static Manager for all Game Object collision
 class CollisionManager   
 {
 
 public:
-	static CollisionManager* instance() { return _instance != nullptr ? _instance : _instance = new CollisionManager(); }
-	static bool SquareCollision(BoxCollider* collider1, BoxCollider* collider2);  
 	
+	/// @brief  Compares two square colliders against each other for collision. If a collision has occured then true is returned.
+	/// @param collider1 
+	/// @param collider2 
+	/// @return 
+	static bool SquareCollision(BoxCollider* collider1, BoxCollider* collider2);  
+
+	/// @brief Compares two circle colliders against each other for collision. If a collision occurs then true is returned.
+	/// @param collider1 
+	/// @param collider2 
+	/// @return 
 	static bool CircleCollision(CircleCollider* collider1, CircleCollider* collider2);
 
+	/// @brief Compares a circle collider against a box collider for collision. If a collision occurs then true is returned.
+	/// @param circ 
+	/// @param box 
+	/// @return 
 	static bool CircleRectCollision(CircleCollider* circ, BoxCollider* box);
 
 	static bool BoundsCollision();  
-	void HandleCollision();
-	void Update();
-	void AddCollider(Collider* collider);
+
+	/// @brief Iterates through all colliders in the list as pairs. Compares the collider type of nth and n+1 and carries out the relevant collision check between them. 
+	static void HandleCollision();
+	/// @brief Ticks over the handle collision function 
+	static void Update();
+
+	/// @brief Adds a collider object to the Collision Manager collider list. 
+	/// @param collider 
+	static void AddCollider(Collider* collider);
 
 private:
-	static CollisionManager* _instance;
-	std::list<Collider*> colliders;
+	CollisionManager();
+	//static CollisionManager* _instance;
+	static std::list<Collider*> colliders;
 	
 };
 

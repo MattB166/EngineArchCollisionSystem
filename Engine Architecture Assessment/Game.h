@@ -4,6 +4,7 @@
 #include <list>
 #include "SDL_image.h"
 #include "GameObject.h"
+#include "CollisionManager.h"
 
 #include "Time.h"
 class GameObject;
@@ -28,7 +29,6 @@ private:
 	void Update();
 	void SpawnObjects(ObjectType type, int amount, SDL_Renderer* renderer, SDL_Texture* FirstTexture, SDL_Texture* SecondTexture);
 	bool isRunning;
-	
 	
 
 	

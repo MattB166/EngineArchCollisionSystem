@@ -112,7 +112,7 @@ void Game::Update()
 		(*iter)->Update();
 	}
 	
-	CollisionManager::instance()->Update();
+	CollisionManager::Update();
 	
 }
 
