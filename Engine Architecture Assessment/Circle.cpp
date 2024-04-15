@@ -20,8 +20,8 @@ Circle::~Circle()
 
 void Circle::Draw()
 {
-	//Vector2 ObjectCentre = pos + Vector2(width / 2, height / 2);
-	SDL_SetRenderDrawColor(Renderer, 255, 0, 0, 255);
+	
+	SDL_SetRenderDrawColor(Renderer, 255, 0, 0, 255); ///random ints every time it collides 
 	for (int w = 0; w < radius * 2; ++w)
 	{
 		
@@ -39,7 +39,7 @@ void Circle::Draw()
 	}
 
 	
-	//std::cout << "Circle X Position is: " << pos.x  << "Circle Y Position is:" << pos.y << std::endl;
+	
 	
 }
 

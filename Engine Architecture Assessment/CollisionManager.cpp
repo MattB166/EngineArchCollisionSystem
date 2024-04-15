@@ -2,12 +2,10 @@
 
 CollisionManager* CollisionManager::_instance = nullptr;
 
-/// <summary>
-/// Compares two box colliders against each other for collision. If a collision has occured then true is returned.
-/// </summary>
-/// <param name="collider1"></param>
-/// <param name="Collider2"></param>
-/// <returns></returns>
+/// @brief Compares two square colliders against each other for collision. If a collision has occured then true is returned.
+/// @param collider1 
+/// @param collider2 
+/// @return 
 bool CollisionManager::SquareCollision(BoxCollider* collider1, BoxCollider* collider2)
 {
 
@@ -32,18 +30,17 @@ bool CollisionManager::SquareCollision(BoxCollider* collider1, BoxCollider* coll
 
 	return MaxX1 > MinX2 && MinX1 < MaxX2 && MaxY1 > MinY2 && MinY1 < MaxY2;
 }
-/// <summary>
-/// Compares two circle colliders against each other for collision. If a collision has occured then true is returned.
-/// </summary>
-/// <returns></returns>
+/// @brief Compares two circle colliders against each other for collision. If a collision occurs then true is returned.
+/// @param collider1 
+/// @param collider2 
+/// @return 
 bool CollisionManager::CircleCollision(CircleCollider* collider1, CircleCollider* collider2)
 {
 	float dx = *collider1->x - *collider2->x;
 	float dy = *collider1->y - *collider2->y;
 	float distance = sqrt((dx * dx) + (dy * dy));
-	//std::cout << "Distance: " << distance << std::endl;
-	//std::cout << "Radius 1: " << *collider1->radius << std::endl;
-	//std::cout << "Radius 2: " << *collider2->radius << std::endl;
+	
+
 	if (distance <= *collider1->radius + *collider2->radius)
 	{
 		return true;
@@ -53,31 +50,31 @@ bool CollisionManager::CircleCollision(CircleCollider* collider1, CircleCollider
 
 }
 
-/// <summary>
-/// Compares a box collider against a circle collider for collision. If a collision has occured then true is returned. 
-/// </summary>
-/// <returns></returns>
+/// @brief Compares a circle collider against a box collider for collision. If a collision occurs then true is returned.
+/// @param circ 
+/// @param box 
+/// @return 
 bool CollisionManager::CircleRectCollision(CircleCollider* circ, BoxCollider* box)
 {
-	float cx = *circ->x;
-	float cy = *circ->y;
+	float circleX = *circ->x;
+	float circleY = *circ->y;
 	float radius = *circ->radius;
 
-	float rx = *box->x;
-	float ry = *box->y;
-	float rw = *box->width;
-	float rh = *box->height;
+	float boxX = *box->x;
+	float boxY = *box->y;
+	float boxWidth = *box->width;
+	float boxHeight = *box->height;
 
-	float testX = cx;
-	float testY = cy;
+	float testX = circleX;
+	float testY = circleY;
 
-	if (cx < rx) testX = rx;
-	else if (cx > rx + rw) testX = rx + rw;
-	if (cy < ry) testY = ry;
-	else if (cy > ry + rh) testY = ry + rh;
+	if (circleX < boxX) testX = boxX;
+	else if (circleX > boxX + boxWidth) testX = boxX + boxWidth;
+	if (circleY < boxY) testY = boxY;
+	else if (circleY > boxY + boxHeight) testY = boxY + boxHeight;
 
-	float distX = cx - testX;
-	float distY = cy - testY;
+	float distX = circleX - testX;
+	float distY = circleY - testY;
 	float distance = sqrt((distX * distX) + (distY * distY));
 
 	if (distance <= radius)
@@ -88,25 +85,15 @@ bool CollisionManager::CircleRectCollision(CircleCollider* circ, BoxCollider* bo
 	return false;
 }
 
-/// <summary>
-/// Checks for collision between Objects and the bounds of the 2D world. If a collision has occured then true is returned. 
-/// </summary>
-/// <returns></returns>
+/// @brief 
+/// @return 
 bool CollisionManager::BoundsCollision()
 {
 	return false;
 }
 
-//void CollisionManager::CreateCollider(float &x,float &y,float &w,float &h)
-//{
-//
-//	std::cout << "added collider " << std::endl; 
-//	
-//}
 
-/// <summary>
-/// Checks between all actively set colliders to compare against each other. If any collision is detected via any method, the colliders callbacks are triggered. 
-/// </summary>
+/// @brief Iterates through all colliders in the list as pairs. Compares the collider type of nth and n+1 and carries out the relevant collision check between them. 
 void CollisionManager::HandleCollision()
 {
 	for (auto it = colliders.begin(); it != colliders.end(); ++it)
@@ -126,19 +113,19 @@ void CollisionManager::HandleCollision()
 				}
 				else if (SquareCollision(bCol, bCol1))
 				{
-					//std::cout << "COLLISION DETECTED" << std::endl;
+					
 					bCol->callback(bCol1);
 					bCol1->callback(bCol);
 				}
 			}
 			 if (col->GetColliderType() == SquareCollider && col1->GetColliderType() == CircCollider)
 			{
-				//std::cout << "FOUND SQUARE AND CIRCLE COLLIDER" << std::endl;
+				
 				BoxCollider* bCol = dynamic_cast<BoxCollider*>(col);
 				CircleCollider* cCol = dynamic_cast<CircleCollider*>(col1);
 				if (bCol == nullptr || cCol == nullptr)
 				{
-					//std::cout << "NULLPTR" << std::endl;
+					
 					continue;
 				}
 				else if (CircleRectCollision(cCol, bCol))
@@ -146,19 +133,19 @@ void CollisionManager::HandleCollision()
 
 					bCol->callback(cCol);
 					cCol->callback(bCol);
-					//std::cout << "Circle Rect Collision Detected" << std::endl;
+					
 				}
 
-				///circle collider here 
+				
 			}
 			 if (col->GetColliderType() == CircCollider && col1->GetColliderType() == CircCollider)
 			{
-				//std::cout << "FOUND CIRCLE AND CIRCLE COLLIDER" << std::endl;
+				
 				CircleCollider* cCol = dynamic_cast<CircleCollider*>(col);
 				CircleCollider* cCol1 = dynamic_cast<CircleCollider*>(col1);
 				if (cCol == nullptr || cCol1 == nullptr)
 				{
-					//std::cout << "NULLPTR" << std::endl;
+					
 					continue;
 				}
 				else if (CircleCollision(cCol, cCol1))
@@ -173,9 +160,7 @@ void CollisionManager::HandleCollision()
 	}
 }
 
-/// <summary>
-/// Called every frame to iterate through collider checks. 
-/// </summary>
+/// @brief Ticks over the handle collision function 
 void CollisionManager::Update()
 {
 	HandleCollision();
@@ -184,15 +169,13 @@ void CollisionManager::Update()
 }
 
 
-/// <summary>
-/// Add a collider to the collision system list, to be checked for collisions. 
-/// </summary>
-/// <param name="collider"></param>
+/// @brief Adds a collider object to the Collision Manager collider list. 
+/// @param collider 
 void CollisionManager::AddCollider(Collider* collider)
 {
 	colliders.push_back(collider);
 
 	std::cout << "ADDED COLLIDER TO LIST" << std::endl;
-	//std::cout << colliders.size() << std::endl;
+	
 
 }

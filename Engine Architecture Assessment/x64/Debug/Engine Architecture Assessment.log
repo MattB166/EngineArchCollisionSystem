@@ -1,10 +1,10 @@
 ﻿  BoxCollider.cpp
   Circle.cpp
-C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\Circle.cpp(9,16): warning C4244: '=': conversion from 'int32_t' to 'float', possible loss of data
-C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\Circle.cpp(21,11): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\Circle.cpp(22,11): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\Circle.cpp(26,53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\Circle.cpp(26,41): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\Circle.cpp(30,11): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\Circle.cpp(31,11): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\Circle.cpp(35,53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\Circle.cpp(35,41): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  CircleCollider.cpp
   Collider.cpp
   CollisionManager.cpp
   EventManager.cpp
@@ -18,17 +18,13 @@ C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assess
 C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(48,51): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
 C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(48,57): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
 C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(48,57): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(135,10): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(136,10): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(133,10): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(134,10): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
 C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(151,29): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(151,22): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  IObserver.cpp
-  main.cpp
   Square.cpp
-  Time.cpp
-  Transform.cpp
-  Vector2.cpp
+  main.cpp
   Generating Code...
 C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\main.cpp(14): warning C4715: 'Initialise': not all control paths return a value
-C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(88): warning C4715: 'GameObject::ObjectTypeToString': not all control paths return a value
+C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(89): warning C4715: 'GameObject::ObjectTypeToString': not all control paths return a value
   Engine Architecture Assessment.vcxproj -> C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\x64\Debug\Engine Architecture Assessment.exe

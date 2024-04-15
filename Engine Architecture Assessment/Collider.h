@@ -1,6 +1,9 @@
 #pragma once
-#include "Vector2.h"
 #include <functional>
+struct ColliderVector2
+{
+	float x, y;
+};
 enum Type
 {
 	SquareCollider,
@@ -13,15 +16,15 @@ public:
 	virtual ~Collider();
 	void SetColliderType(Type type);
 	Type GetColliderType();
-	void SetPosition(Vector2 pos);
-	Vector2 GetPosition();
+	void SetPosition(ColliderVector2 pos);
+	ColliderVector2 GetPosition();
 	bool enabled = true;
 	float* x;
 	float* y;
 	std::function<void(Collider* col)> callback;
 private:
 	Type ColliderType;
-	Vector2 position;
+	ColliderVector2 position;
 	
 };
 

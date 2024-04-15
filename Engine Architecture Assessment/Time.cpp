@@ -19,7 +19,7 @@ float Time::GetDeltaTime() const
 
 float Time::UpdateDeltaTime()
 {
-    //std::cout << "Updating delta time" << std::endl;
+  
     deltaTime = (SDL_GetTicks() - (float)(previousFrameTicks)) / 1000;
     previousFrameTicks = SDL_GetTicks();
     return deltaTime;
