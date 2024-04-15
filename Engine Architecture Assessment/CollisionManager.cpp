@@ -56,7 +56,7 @@ bool CollisionManager::CircleRectCollision(CircleCollider* circ, BoxCollider* bo
 	float boxWidth = *box->width;
 	float boxHeight = *box->height;
 
-	float testX = circleX;
+	float testX = circleX;  //temp variables for checking which side of the box the circle is on. TestX is the side to test 
 	float testY = circleY;
 
 	if (circleX < boxX) testX = boxX;

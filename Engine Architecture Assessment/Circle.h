@@ -21,9 +21,10 @@ public:
 	~Circle();
 	CircleCollider* collider = nullptr;
 	virtual void Draw() override;
+	virtual void OnCollisionNotify(Collider* col) override;
 private:
 	float radius;
-	Colour mainColour;
-	Colour secondaryColour;
+	Colour DrawColour;
+	void RandomColour();
 };
 

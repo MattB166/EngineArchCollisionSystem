@@ -1,34 +1,8 @@
-﻿  BoxCollider.cpp
-  Circle.cpp
+﻿  Circle.cpp
 C:\Users\Matth\Documents\UNI WORK\Actual Year 2\Engine Architecture\EngineArchCollisionSystem\Engine Architecture Assessment\Circle.cpp(30,11): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
 C:\Users\Matth\Documents\UNI WORK\Actual Year 2\Engine Architecture\EngineArchCollisionSystem\Engine Architecture Assessment\Circle.cpp(31,11): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
 C:\Users\Matth\Documents\UNI WORK\Actual Year 2\Engine Architecture\EngineArchCollisionSystem\Engine Architecture Assessment\Circle.cpp(35,53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
 C:\Users\Matth\Documents\UNI WORK\Actual Year 2\Engine Architecture\EngineArchCollisionSystem\Engine Architecture Assessment\Circle.cpp(35,41): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  CircleCollider.cpp
-  Collider.cpp
-  CollisionManager.cpp
-  EventManager.cpp
   Game.cpp
-  GameObject.cpp
-C:\Users\Matth\Documents\UNI WORK\Actual Year 2\Engine Architecture\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(48,33): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-C:\Users\Matth\Documents\UNI WORK\Actual Year 2\Engine Architecture\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(48,33): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\Matth\Documents\UNI WORK\Actual Year 2\Engine Architecture\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(48,48): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-C:\Users\Matth\Documents\UNI WORK\Actual Year 2\Engine Architecture\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(48,48): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\Matth\Documents\UNI WORK\Actual Year 2\Engine Architecture\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(48,51): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-C:\Users\Matth\Documents\UNI WORK\Actual Year 2\Engine Architecture\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(48,51): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\Matth\Documents\UNI WORK\Actual Year 2\Engine Architecture\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(48,57): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-C:\Users\Matth\Documents\UNI WORK\Actual Year 2\Engine Architecture\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(48,57): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\Matth\Documents\UNI WORK\Actual Year 2\Engine Architecture\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(139,10): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\Matth\Documents\UNI WORK\Actual Year 2\Engine Architecture\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(140,10): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\Matth\Documents\UNI WORK\Actual Year 2\Engine Architecture\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(157,29): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Matth\Documents\UNI WORK\Actual Year 2\Engine Architecture\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(157,22): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  IObserver.cpp
-  main.cpp
-  Square.cpp
-  Time.cpp
-  Transform.cpp
-  Vector2.cpp
   Generating Code...
-C:\Users\Matth\Documents\UNI WORK\Actual Year 2\Engine Architecture\EngineArchCollisionSystem\Engine Architecture Assessment\main.cpp(14,1): warning C4715: 'Initialise': not all control paths return a value
-C:\Users\Matth\Documents\UNI WORK\Actual Year 2\Engine Architecture\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(89,1): warning C4715: 'GameObject::ObjectTypeToString': not all control paths return a value
   Engine Architecture Assessment.vcxproj -> C:\Users\Matth\Documents\UNI WORK\Actual Year 2\Engine Architecture\EngineArchCollisionSystem\Engine Architecture Assessment\x64\Debug\Engine Architecture Assessment.exe

@@ -21,7 +21,7 @@ Circle::~Circle()
 void Circle::Draw()
 {
 	
-	SDL_SetRenderDrawColor(Renderer, 255, 0, 0, 255); ///random ints every time it collides 
+	SDL_SetRenderDrawColor(Renderer,DrawColour.r,DrawColour.g,DrawColour.b,DrawColour.a); ///random ints every time it collides 
 	for (int w = 0; w < radius * 2; ++w)
 	{
 		
@@ -41,6 +41,20 @@ void Circle::Draw()
 	
 	
 	
+}
+
+void Circle::OnCollisionNotify(Collider* col)
+{
+	RandomColour();
+	GameObject::OnCollisionNotify(col);
+}
+
+void Circle::RandomColour()
+{
+	DrawColour.a = rand() % 255 + 1;
+	DrawColour.r = rand() % 255 + 1;
+	DrawColour.g = rand() % 255 + 1;
+	DrawColour.b = rand() % 255 + 1;
 }
 
 

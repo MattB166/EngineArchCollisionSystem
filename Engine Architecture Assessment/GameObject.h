@@ -42,7 +42,7 @@ public:
 	std::string getName();
 	ObjectType GetType();
 	
-	void OnCollisionNotify(Collider* col);
+	virtual void OnCollisionNotify(Collider* col);
 protected:
     virtual void ChangeTexture();
 	virtual void Draw();
