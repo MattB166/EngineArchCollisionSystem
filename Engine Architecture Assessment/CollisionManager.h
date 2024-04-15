@@ -42,6 +42,10 @@ public:
 	/// @param collider 
 	static void AddCollider(Collider* collider);
 
+	/// @brief Cleans all the colliders from the list.
+	/// @return 
+	static void CleanUp(); 
+
 private:
 	CollisionManager();
 	//static CollisionManager* _instance;

@@ -168,3 +168,12 @@ void CollisionManager::AddCollider(Collider* collider)
 	
 
 }
+
+void CollisionManager::CleanUp()
+{
+	for (auto it = colliders.begin(); it != colliders.end(); ++it)
+	{
+		delete *it;
+		*it = nullptr;
+	}
+}
