@@ -101,9 +101,16 @@ std::string GameObject::getName()
 void GameObject::OnCollisionNotify(Collider* col)
 {
 	//std::cout << "Calling collision" << std::endl; 
-	ChangeTexture();
+	
 	arrived = true;      //////this method does work but can cause some issues with the movement method. when 2 objects collide they both stop moving if chosen opposite direction from opposite side. 
 	movementStopped = true;
+}
+
+void GameObject::OnOtherObjectCollisionNotify(Collider* col, Collider* col1)
+{
+	///check how far away they are 
+	ChangeTexture();
+	std::cout << "Collision between other objects noted" << std::endl;	
 }
 
 

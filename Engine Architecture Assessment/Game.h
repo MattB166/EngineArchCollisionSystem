@@ -29,6 +29,8 @@ private:
 	void Update();
 	void SpawnObjects(ObjectType type, int amount, SDL_Renderer* renderer, SDL_Texture* FirstTexture, SDL_Texture* SecondTexture);
 	bool isRunning;
+
+
 	
 
 	

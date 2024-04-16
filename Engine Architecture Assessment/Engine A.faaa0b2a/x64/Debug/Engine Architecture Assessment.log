@@ -1,8 +1,2 @@
-﻿  Circle.cpp
-C:\Users\Matth\Documents\UNI WORK\Actual Year 2\Engine Architecture\EngineArchCollisionSystem\Engine Architecture Assessment\Circle.cpp(30,11): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\Matth\Documents\UNI WORK\Actual Year 2\Engine Architecture\EngineArchCollisionSystem\Engine Architecture Assessment\Circle.cpp(31,11): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\Matth\Documents\UNI WORK\Actual Year 2\Engine Architecture\EngineArchCollisionSystem\Engine Architecture Assessment\Circle.cpp(35,53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\Matth\Documents\UNI WORK\Actual Year 2\Engine Architecture\EngineArchCollisionSystem\Engine Architecture Assessment\Circle.cpp(35,41): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  Game.cpp
-  Generating Code...
+﻿  Game.cpp
   Engine Architecture Assessment.vcxproj -> C:\Users\Matth\Documents\UNI WORK\Actual Year 2\Engine Architecture\EngineArchCollisionSystem\Engine Architecture Assessment\x64\Debug\Engine Architecture Assessment.exe

@@ -1,4 +1,5 @@
 #include "Square.h"
+#include "EventManager.h"
 
 /// <summary>
 /// Instantiation of Square triggers creation of a new collider, which is then added to collision manager. 
@@ -12,6 +13,7 @@ Square::Square(Parameters params) :GameObject(params)
 	Object = params.type;
 	collider = new BoxCollider(pos.x, pos.y, width, height,std::bind(&GameObject::OnCollisionNotify,this,std::placeholders::_1));
 	CollisionManager::AddCollider(collider); 
+	EventManager<Square>::RegisterListener(this, std::bind(&GameObject::OnOtherObjectCollisionNotify, this, std::placeholders::_1,std::placeholders::_2),EventType::Collision);
 
 }
 

@@ -4,7 +4,6 @@
 #include <string>
 #include "Game.h"
 #include "Vector2.h"
-#include "EventManager.h"
 #include "CollisionManager.h"
 #include "IObserver.h"
 enum ObjectType
@@ -43,6 +42,7 @@ public:
 	ObjectType GetType();
 	
 	virtual void OnCollisionNotify(Collider* col);
+	virtual void OnOtherObjectCollisionNotify(Collider* col, Collider* col1);
 protected:
     virtual void ChangeTexture();
 	virtual void Draw();

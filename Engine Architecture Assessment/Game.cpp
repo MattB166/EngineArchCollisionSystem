@@ -1,10 +1,14 @@
 #include "Game.h"
 #include "Square.h"
+#include "EventManager.h"
 #include "Circle.h"
+#include <thread>
 
 Game* Game::_instance = nullptr;
 float Game::WorldX = 800;
 float Game::WorldY = 600;
+//std::thread dispatchEvent(EventManager<Game>::Update);
+
 
 void Game::Run()
 {
@@ -30,13 +34,24 @@ void Game::Run()
 	
 	isRunning = true;
 	
+	 // not working properly 
+	
+	
 	while (isRunning)
 	{
 		SDL_SetRenderDrawColor(g_sdlRenderer, 19, 47, 209, 255);
 		SDL_RenderClear(g_sdlRenderer);
 		Update(); 
+		/*if (dispatchEvent.joinable())
+		{
+			dispatchEvent.join();
+		}*/
+		
+		
+		
 		SDL_RenderPresent(g_sdlRenderer);
 	}
+	
 	SDL_DestroyTexture(MagicTexture);
 	SDL_DestroyTexture(SecondTexture);
 	CleanUp();
@@ -61,6 +76,8 @@ bool Game::Initialise()
 		return true;
 
 	}
+	
+
 
 	return false;
 }
@@ -112,8 +129,14 @@ void Game::Update()
 	{
 		(*iter)->Update();
 	}
-	
 	CollisionManager::Update();
+	
+	
+	
+	
+
+	
+	//EventManager<Game>::Update();	
 	
 }
 
@@ -126,6 +149,7 @@ void Game::SpawnObjects(ObjectType type, int amount,SDL_Renderer* renderer, SDL_
 			Parameters params(FirstTexture, SecondTexture, renderer, type);
 			Square* square = new Square(params);
 			objects.push_back(square);
+			
 		}
 		
 	}
@@ -137,6 +161,7 @@ void Game::SpawnObjects(ObjectType type, int amount,SDL_Renderer* renderer, SDL_
 			CircleParameters param(50);
 			Circle* circle = new Circle(params, param);
 			objects.push_back(circle);
+			
 		}
 		
 	}

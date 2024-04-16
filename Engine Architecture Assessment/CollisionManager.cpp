@@ -1,4 +1,5 @@
 #include "CollisionManager.h"
+#include "EventManager.h"
 
 //CollisionManager* CollisionManager::_instance = nullptr;
 std::list<Collider*> CollisionManager::colliders;
@@ -70,7 +71,7 @@ bool CollisionManager::CircleRectCollision(CircleCollider* circ, BoxCollider* bo
 
 	if (distance <= radius)
 	{
-		std::cout << "Square/circ collision detected" << std::endl;
+		//std::cout << "Square/circ collision detected" << std::endl;
 		return true;
 	}
 	return false;
@@ -104,8 +105,10 @@ void CollisionManager::HandleCollision()
 				else if (SquareCollision(bCol, bCol1))
 				{
 					
-					bCol->callback(bCol1);
+					bCol->callback(bCol1); ////possibly change this to carry 2 params so that each obj can check whether it is them ? 
 					bCol1->callback(bCol);
+					EventManager<Collider*>::ProduceEvent(EventType::Collision, bCol, bCol1);
+					
 				}
 			}
 			 if (col->GetColliderType() == SquareCollider && col1->GetColliderType() == CircCollider)
@@ -123,6 +126,7 @@ void CollisionManager::HandleCollision()
 
 					bCol->callback(cCol);
 					cCol->callback(bCol);
+					///produce event here to notify the other objects that a collision has occured.
 					
 				}
 
@@ -140,9 +144,10 @@ void CollisionManager::HandleCollision()
 				}
 				else if (CircleCollision(cCol, cCol1))
 				{
-					std::cout << "CIRCLE COLLISION DETECTED" << std::endl;
+					//std::cout << "CIRCLE COLLISION DETECTED" << std::endl;
 					cCol->callback(cCol1);
 					cCol1->callback(cCol);
+					///produce event here to notify the other objects that a collision has occured.
 				}
 			}
 
@@ -164,7 +169,7 @@ void CollisionManager::AddCollider(Collider* collider)
 {
 	colliders.push_back(collider);
 
-	std::cout << "ADDED COLLIDER TO LIST" << std::endl;
+	//std::cout << "ADDED COLLIDER TO LIST" << std::endl;
 	
 
 }
