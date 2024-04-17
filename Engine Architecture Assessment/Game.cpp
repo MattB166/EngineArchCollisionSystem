@@ -132,6 +132,7 @@ void Game::Update()
 	}
 	CollisionManager::Update();
 	
+	EventManager::Update();
 	
 	
 	
@@ -141,7 +142,6 @@ void Game::Update()
 	{
 		std::cout << "siadbiasd" << std::endl;	
 	}*/
-	//EventManager<Collider>::Update();
 	
 }
 

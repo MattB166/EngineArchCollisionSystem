@@ -27,6 +27,7 @@ struct Parameters
 
 
 class GameObject
+
 {
 public:
 	GameObject(ObjectType type);

@@ -3,8 +3,6 @@
 #include <list>
 #include <map>
 #include <functional>
-#include <thread>
-#include <mutex>
 #include "CollisionManager.h"
 enum class EventType
 {
@@ -17,84 +15,53 @@ struct Event
 	Collider* col1;
 	Collider* col2;
 
+	Event() : type(EventType::Collision), col1(nullptr), col2(nullptr) {};
 	Event(EventType type, Collider* col1, Collider* col2) : type(type), col1(col1), col2(col2) {};
 };
-template<class T>
 class EventManager
 {
 public: 
-	inline static void RegisterListener(T* listener, std::function<void(Collider* col, Collider* col2)> func, EventType type)
+	inline static void RegisterListener(Collider* col, std::function<void(Collider* col1, Collider* col2)> callback, EventType type)
 	{
-		listeners.push_back(listener);
-		listenerTypeMap.insert(std::make_pair(listener, type));
-		listenerFuncMap.insert(std::make_pair(listener, func));
-		//std::cout << "Listener Registered" << std::endl;
+		listeners.push_back(col);
+		listenersFuncMap.insert(std::make_pair(col, callback));
+		listenersTypeMap.insert(std::make_pair(col, Event(type, nullptr, nullptr)));
 	}
-	inline static void ProduceEvent(EventType type, Collider* col, Collider* col2)
+
+	inline static void ProduceEvent(EventType type, Collider* col1, Collider* col2)
 	{
-		Event* event = new Event(type, col, col2);
-		//std::lock_guard<std::mutex> lock(mutex);
-		CollisionEventQueue.push(event);
-		//std::cout << "Event added to queue" << std::endl;
-		
+		Event* event = new Event(type, col1, col2);
+		EventQueue.push(event);
+
 	}
-	
+
 	inline static void Update()
 	{
-		//std::lock_guard<std::mutex> lock(mutex);
-		DispatchEvents();
-		//std::_Unlock_call_guard<std::mutex> unlock(mutex);
-		//mutex.unlock();
-	}
-	/*static void UpdateCollisionSystem();*/
-private:
-	EventManager();
-	//std::queue<CollisionEvent> EventQueue;
-	
-	inline static void DispatchEvents()
-	{
-		std::cout << " Running Dispatch Events" << std::endl;
-		//std::lock_guard<std::mutex> lock(mutex);
-		
-		while (!CollisionEventQueue.empty())         /////doesnt get into this loop
+		while (!EventQueue.empty())
 		{
-			std::cout << "Dispatching Event" << std::endl;
-			
-			CollisionEventQueue.pop();
-			Event* event = CollisionEventQueue.front(); ///checks through queue for events, then checks through the listeners to see if they care about the event. if so, call the callback function.
-			for (auto it = listeners.begin(); it != listeners.end(); ++it)
+			std::cout << "Producing event\n" << std::endl; 
+			Event* event = EventQueue.front();
+			EventQueue.pop();
+			for (auto& listener : listeners)
 			{
-				if (listenerTypeMap[*it] == event->type)
+				if (listenersTypeMap[listener].type == event->type)
 				{
-					std::cout << "Event Dispatched" << std::endl;
-					listenerFuncMap[*it](event->col1, event->col2);
-					
+					listenersFuncMap[listener](event->col1, event->col2);
 				}
 			}
 		}
-		
-		
-
 	}
 
-
-	static std::list<T*> listeners;  
-	static std::map<T*, std::function<void(Collider* col, Collider* col2)>> listenerFuncMap;
-	static std::map<T*, EventType> listenerTypeMap;
-public:
-	static std::queue<Event*> CollisionEventQueue;
+	
 private:
-	//static std::mutex mutex;
+	EventManager();
+	static std::vector<Collider*> listeners;
+	static std::queue<Event*> EventQueue;
+	static std::map<Collider*, std::function<void(Collider* col1, Collider* col2)>> listenersFuncMap;
+	static std::map<Collider*, Event> listenersTypeMap;
 
+	
+	
+	
 };
 
-template<class T>
-std::list<T*> EventManager<T>::listeners;
-template<class T>
-std::map<T*, std::function<void(Collider* col, Collider* col2)>> EventManager<T>::listenerFuncMap;
-template<class T>
-std::map<T*, EventType> EventManager<T>::listenerTypeMap;
-//template<class T>
-//std::queue<Event*> EventManager<Event*>::EventQueue;
-//template<class T>
-//std::mutex EventManager<T>::mutex;
