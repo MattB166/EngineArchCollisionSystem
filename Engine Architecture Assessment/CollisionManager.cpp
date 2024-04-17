@@ -107,7 +107,8 @@ void CollisionManager::HandleCollision()
 					
 					bCol->callback(bCol1); ////possibly change this to carry 2 params so that each obj can check whether it is them ? 
 					bCol1->callback(bCol);
-					EventManager<Collider*>::ProduceEvent(EventType::Collision, bCol, bCol1);
+					EventManager<Collider>::ProduceEvent(EventType::Collision, bCol, bCol1);
+					//std::queue<Event*> ggggg = EventManager<Event*>::EventQueue;
 					
 				}
 			}

@@ -1,34 +1,7 @@
-﻿  BoxCollider.cpp
-  Circle.cpp
-C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\Circle.cpp(30,11): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\Circle.cpp(31,11): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\Circle.cpp(35,53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\Circle.cpp(35,41): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  CircleCollider.cpp
-  Collider.cpp
-  CollisionManager.cpp
+﻿  CollisionManager.cpp
   EventManager.cpp
   Game.cpp
-  GameObject.cpp
-C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(48,33): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(48,33): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(48,48): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(48,48): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(48,51): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(48,51): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(48,57): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(48,57): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(133,10): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(134,10): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(151,29): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(151,22): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  IObserver.cpp
-  main.cpp
   Square.cpp
-  Time.cpp
-  Transform.cpp
-  Vector2.cpp
   Generating Code...
-C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\main.cpp(14): warning C4715: 'Initialise': not all control paths return a value
-C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(89): warning C4715: 'GameObject::ObjectTypeToString': not all control paths return a value
-  Engine Architecture Assessment.vcxproj -> C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\x64\Debug\Engine Architecture Assessment.exe
+CollisionManager.obj : error LNK2001: unresolved external symbol "public: static class std::queue<struct Event *,class std::deque<struct Event *,class std::allocator<struct Event *> > > EventManager<class Collider>::CollisionEventQueue" (?CollisionEventQueue@?$EventManager@VCollider@@@@2V?$queue@PEAUEvent@@V?$deque@PEAUEvent@@V?$allocator@PEAUEvent@@@std@@@std@@@std@@A)
+C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\x64\Debug\Engine Architecture Assessment.exe : fatal error LNK1120: 1 unresolved externals

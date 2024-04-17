@@ -34,15 +34,16 @@ public:
 	{
 		Event* event = new Event(type, col, col2);
 		//std::lock_guard<std::mutex> lock(mutex);
-		EventQueue.push(event);
+		CollisionEventQueue.push(event);
 		//std::cout << "Event added to queue" << std::endl;
 		
 	}
 	
 	inline static void Update()
 	{
-		//mutex.lock();	
+		//std::lock_guard<std::mutex> lock(mutex);
 		DispatchEvents();
+		//std::_Unlock_call_guard<std::mutex> unlock(mutex);
 		//mutex.unlock();
 	}
 	/*static void UpdateCollisionSystem();*/
@@ -52,15 +53,15 @@ private:
 	
 	inline static void DispatchEvents()
 	{
-		//std::cout << " Running Dispatch Events" << std::endl;
+		std::cout << " Running Dispatch Events" << std::endl;
 		//std::lock_guard<std::mutex> lock(mutex);
 		
-		if (!EventQueue.empty())         /////doesnt get into this loop
+		while (!CollisionEventQueue.empty())         /////doesnt get into this loop
 		{
 			std::cout << "Dispatching Event" << std::endl;
 			
-			Event* event = EventQueue.front(); ///checks through queue for events, then checks through the listeners to see if they care about the event. if so, call the callback function.
-			EventQueue.pop();
+			CollisionEventQueue.pop();
+			Event* event = CollisionEventQueue.front(); ///checks through queue for events, then checks through the listeners to see if they care about the event. if so, call the callback function.
 			for (auto it = listeners.begin(); it != listeners.end(); ++it)
 			{
 				if (listenerTypeMap[*it] == event->type)
@@ -76,12 +77,14 @@ private:
 
 	}
 
-	
+
 	static std::list<T*> listeners;  
 	static std::map<T*, std::function<void(Collider* col, Collider* col2)>> listenerFuncMap;
 	static std::map<T*, EventType> listenerTypeMap;
-	static std::queue<Event*> EventQueue;
-	static std::mutex mutex;
+public:
+	static std::queue<Event*> CollisionEventQueue;
+private:
+	//static std::mutex mutex;
 
 };
 
@@ -91,7 +94,7 @@ template<class T>
 std::map<T*, std::function<void(Collider* col, Collider* col2)>> EventManager<T>::listenerFuncMap;
 template<class T>
 std::map<T*, EventType> EventManager<T>::listenerTypeMap;
-template<class T>
-std::queue<Event*> EventManager<T>::EventQueue;
-template<class T>
-std::mutex EventManager<T>::mutex;
+//template<class T>
+//std::queue<Event*> EventManager<Event*>::EventQueue;
+//template<class T>
+//std::mutex EventManager<T>::mutex;

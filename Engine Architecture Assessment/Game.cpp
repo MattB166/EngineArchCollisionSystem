@@ -7,7 +7,7 @@
 Game* Game::_instance = nullptr;
 float Game::WorldX = 800;
 float Game::WorldY = 600;
-//std::thread dispatchEvent(EventManager<Game>::Update);
+//std::thread dispatchEvent(&EventManager<Game>::Update);
 
 
 void Game::Run()
@@ -34,11 +34,12 @@ void Game::Run()
 	
 	isRunning = true;
 	
-	 // not working properly 
 	
 	
 	while (isRunning)
 	{
+		SDL_PumpEvents();
+
 		SDL_SetRenderDrawColor(g_sdlRenderer, 19, 47, 209, 255);
 		SDL_RenderClear(g_sdlRenderer);
 		Update(); 
@@ -135,8 +136,12 @@ void Game::Update()
 	
 	
 
-	
-	//EventManager<Game>::Update();	
+	/*std::queue<Event*> hifooasdf = EventManager<Game>::EventQueue;
+	if (hifooasdf.size() > 0)
+	{
+		std::cout << "siadbiasd" << std::endl;	
+	}*/
+	//EventManager<Collider>::Update();
 	
 }
 
