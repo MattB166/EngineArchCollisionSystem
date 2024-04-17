@@ -107,9 +107,9 @@ void CollisionManager::HandleCollision()
 					
 					bCol->callback(bCol1); ////possibly change this to carry 2 params so that each obj can check whether it is them ? 
 					bCol1->callback(bCol);
-					//EventManager::ProduceEvent(EventType::Collision, bCol, bCol1);
+					
 					EventManager::ProduceEvent(EventType::Collision, bCol1, bCol);
-					//std::queue<Event*> ggggg = EventManager<Event*>::EventQueue;
+					
 					
 				}
 			}
@@ -128,7 +128,7 @@ void CollisionManager::HandleCollision()
 
 					bCol->callback(cCol);
 					cCol->callback(bCol);
-					///produce event here to notify the other objects that a collision has occured.
+					
 					
 				}
 
@@ -146,10 +146,10 @@ void CollisionManager::HandleCollision()
 				}
 				else if (CircleCollision(cCol, cCol1))
 				{
-					//std::cout << "CIRCLE COLLISION DETECTED" << std::endl;
+					
 					cCol->callback(cCol1);
 					cCol1->callback(cCol);
-					///produce event here to notify the other objects that a collision has occured.
+					
 				}
 			}
 
@@ -171,7 +171,7 @@ void CollisionManager::AddCollider(Collider* collider)
 {
 	colliders.push_back(collider);
 
-	//std::cout << "ADDED COLLIDER TO LIST" << std::endl;
+	
 	
 
 }

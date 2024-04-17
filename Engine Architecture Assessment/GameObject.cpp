@@ -110,7 +110,7 @@ void GameObject::OnOtherObjectCollisionNotify(Collider* col, Collider* col1)
 {
 	///check how far away they are 
 	ChangeTexture();
-	//std::cout << "Collision between other objects noted" << std::endl;	
+	std::cout << "Collision between other objects noted" << std::endl;	
 }
 
 
@@ -145,7 +145,7 @@ void GameObject::SetObjectPosition()
 
 void GameObject::Movement(float deltaTime)
 {
-	static const float reverseDuration = 3.0f;
+	static const float reverseDuration = 0.5f;
 	static float reverseTime = 0.0f;
 	if (!movementStopped)
 	{

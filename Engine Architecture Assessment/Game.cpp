@@ -43,16 +43,15 @@ void Game::Run()
 		SDL_SetRenderDrawColor(g_sdlRenderer, 19, 47, 209, 255);
 		SDL_RenderClear(g_sdlRenderer);
 		Update(); 
-		/*if (dispatchEvent.joinable())
-		{
-			dispatchEvent.join();
-		}*/
+		
 		
 		
 		
 		SDL_RenderPresent(g_sdlRenderer);
 	}
 	
+	CollisionManager::CleanUp();
+	EventManager::CleanUp();
 	SDL_DestroyTexture(MagicTexture);
 	SDL_DestroyTexture(SecondTexture);
 	CleanUp();
@@ -134,14 +133,6 @@ void Game::Update()
 	
 	EventManager::Update();
 	
-	
-	
-
-	/*std::queue<Event*> hifooasdf = EventManager<Game>::EventQueue;
-	if (hifooasdf.size() > 0)
-	{
-		std::cout << "siadbiasd" << std::endl;	
-	}*/
 	
 }
 

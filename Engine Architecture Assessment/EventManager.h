@@ -52,7 +52,18 @@ public:
 		}
 	}
 
-	
+	static void CleanUp()
+	{
+		listeners.clear();
+		listenersFuncMap.clear();
+		listenersTypeMap.clear();
+		while (!EventQueue.empty())
+		{
+			Event* event = EventQueue.front();
+			EventQueue.pop();
+			delete event;
+		}
+	}
 private:
 	EventManager();
 	static std::vector<Collider*> listeners;
