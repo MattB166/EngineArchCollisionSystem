@@ -5,7 +5,6 @@
 #include "Game.h"
 #include "Vector2.h"
 #include "EventManager.h"
-#include "IObserver.h"
 enum ObjectType
 {
 	ShapeSquare,
@@ -54,7 +53,7 @@ protected:
 	ObjectType Object; 
 	Vector2 pos;
 	Vector2 movePos;
-	
+	int CollisionCount = 0;
 	float speed = 60;
 	float width = 40;
 	float height = 40;

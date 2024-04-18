@@ -21,12 +21,31 @@ Square::~Square()
 	delete collider;
 }
 
+void Square::OnCollisionNotify(Collider* col)
+{
+	if (col->GetColliderType() == collider->GetColliderType())
+	{
+		std::cout << "FRIENDLY FIRE" << std::endl;
+		if (CollisionCount >= 10)
+		{
+			std::cout << "Square has reached 10 collision. Collider has been de activated" << std::endl;
+		}
+	}
+	GameObject::OnCollisionNotify(col);
+}
+
 void Square::OnOtherObjectCollisionNotify(Collider* col, Collider* col1)
 {
 	if(col != collider && col1 != collider)
 	{
 		std::cout << "Square has Detected Collision between two other game objects" << std::endl;
+		if (col->GetColliderType() == CircCollider && col1->GetColliderType() == SquareCollider || col->GetColliderType() == SquareCollider && col1->GetColliderType() == CircCollider)
+		{
+			std::cout << "A circle has attacked my square mate! " << std::endl;
+			///attack circle 
+		}
 	}
+	
 	GameObject::OnOtherObjectCollisionNotify(col, col1);
 }
 

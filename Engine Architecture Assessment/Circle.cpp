@@ -46,8 +46,29 @@ void Circle::Draw()
 
 void Circle::OnCollisionNotify(Collider* col)
 {
+	
 	RandomColour();
+	if (col->GetColliderType() == collider->GetColliderType())
+	{
+		std::cout << "FRIENDLY FIRE" << std::endl;
+	}
 	GameObject::OnCollisionNotify(col);
+	
+}
+
+void Circle::OnOtherObjectCollisionNotify(Collider* col, Collider* col1)
+{
+	if (col != collider && col1 != collider)
+	{
+		std::cout << "Circle has Detected Collision between two other game objects" << std::endl;
+		if (col->GetColliderType() == CircCollider && col1->GetColliderType() == SquareCollider || col->GetColliderType() == SquareCollider && col1->GetColliderType() == CircCollider)
+		{
+			std::cout << "A square has attacked my circle mate! " << std::endl;
+			///attack square 
+		}
+	}
+
+	GameObject::OnOtherObjectCollisionNotify(col, col1);
 }
 
 void Circle::RandomColour()

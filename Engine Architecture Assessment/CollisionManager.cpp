@@ -3,6 +3,7 @@
 
 //CollisionManager* CollisionManager::_instance = nullptr;
 std::list<Collider*> CollisionManager::colliders;
+std::list<Collider*> CollisionManager::inactiveColliders;
 
 bool CollisionManager::SquareCollision(BoxCollider* collider1, BoxCollider* collider2)
 {
@@ -59,8 +60,8 @@ bool CollisionManager::CircleRectCollision(CircleCollider* circ, BoxCollider* bo
 	float boxWidth = *box->width;
 	float boxHeight = *box->height;
 
-	float ClosestX;
-	float ClosestY;
+	float ClosestX = circleX;
+	float ClosestY = circleY;
 
 	if (circleX < boxX)
 	{
@@ -109,6 +110,7 @@ void CollisionManager::HandleCollision()
 {
 	for (auto it = colliders.begin(); it != colliders.end(); ++it)
 	{
+		
 		for (auto ij = std::next(it, 1); ij != colliders.end(); ++ij)
 		{
 			Collider* col = *it;
@@ -148,7 +150,10 @@ void CollisionManager::HandleCollision()
 
 					bCol->callback(cCol);
 					cCol->callback(bCol);
+					EventManager::ProduceEvent(EventType::Collision, cCol, bCol); //cannot remove collider before this or error 
 					
+					
+
 					
 				}
 
@@ -169,6 +174,7 @@ void CollisionManager::HandleCollision()
 					
 					cCol->callback(cCol1);
 					cCol1->callback(cCol);
+					EventManager::ProduceEvent(EventType::Collision, cCol1, cCol);
 					
 				}
 			}

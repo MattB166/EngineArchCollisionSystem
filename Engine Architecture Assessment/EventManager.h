@@ -28,6 +28,12 @@ public:
 		listenersFuncMap.insert(std::make_pair(col, callback));
 		listenersTypeMap.insert(std::make_pair(col, Event(type, nullptr, nullptr)));
 	}
+	inline static void UnRegisterListener(Collider* col)
+	{
+		listeners.erase(std::remove(listeners.begin(), listeners.end(), col), listeners.end());
+		listenersFuncMap.erase(col);
+		listenersTypeMap.erase(col);
+	}
 
 	inline static void ProduceEvent(EventType type, Collider* col1, Collider* col2)
 	{

@@ -6,6 +6,7 @@ class Square : public GameObject
 public:
 	Square(Parameters params);
 	~Square();
+	void OnCollisionNotify(Collider* col) override;
 	void OnOtherObjectCollisionNotify(Collider* col, Collider* col1) override;
 	BoxCollider* collider  =nullptr; 
 	

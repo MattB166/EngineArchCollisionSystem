@@ -2,7 +2,7 @@
 
 Collider::Collider()
 {
-
+	isActive = true;
 }
 
 Collider::~Collider()
@@ -31,5 +31,15 @@ void Collider::SetPosition(ColliderVector2 pos)
 ColliderVector2 Collider::GetPosition()
 {
 	return position;
+}
+
+bool Collider::GetState()
+{
+	return isActive;
+}
+
+void Collider::SetState(bool state)
+{
+	isActive = state;
 }
 

@@ -20,8 +20,10 @@ public:
 	Circle(Parameters params, CircleParameters param);
 	~Circle();
 	CircleCollider* collider = nullptr;
-	virtual void Draw() override;
-	virtual void OnCollisionNotify(Collider* col) override;
+	 void Draw() override;
+	 void OnCollisionNotify(Collider* col) override;
+	 void OnOtherObjectCollisionNotify(Collider* col, Collider* col1) override;
+
 private:
 	float radius;
 	Colour DrawColour;

@@ -54,6 +54,7 @@ private:
 	CollisionManager();
 	//static CollisionManager* _instance;
 	static std::list<Collider*> colliders;
+	static std::list<Collider*> inactiveColliders;
 	
 };
 

@@ -33,11 +33,15 @@ public:
 	float* y;
 	/// @brief The callback function attached to this particular collider. 
 	std::function<void(Collider* col)> callback;
+
+	bool GetState();
+	void SetState(bool state);
 private:
 	/// @brief This struct determines which type of Object/ Collider this is.
 	Type ColliderType;
 	/// @brief Position of this Collider.
 	ColliderVector2 position;
+	bool isActive; 
 	
 };
 

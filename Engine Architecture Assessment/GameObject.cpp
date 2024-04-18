@@ -100,8 +100,8 @@ std::string GameObject::getName()
 
 void GameObject::OnCollisionNotify(Collider* col)
 {
-	
-	
+	CollisionCount++;
+	ChangeTexture();
 	arrived = true;     
 	movementStopped = true;
 }
@@ -109,7 +109,7 @@ void GameObject::OnCollisionNotify(Collider* col)
 void GameObject::OnOtherObjectCollisionNotify(Collider* col, Collider* col1)
 {
 	///check how far away they are 
-	ChangeTexture();
+	
 	//std::cout << "Collision between other objects noted" << std::endl;	
 }
 
