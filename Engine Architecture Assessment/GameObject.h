@@ -4,7 +4,7 @@
 #include <string>
 #include "Game.h"
 #include "Vector2.h"
-#include "CollisionManager.h"
+#include "EventManager.h"
 #include "IObserver.h"
 enum ObjectType
 {

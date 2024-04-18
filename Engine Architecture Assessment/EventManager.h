@@ -3,6 +3,7 @@
 #include <list>
 #include <map>
 #include <functional>
+#include "Collider.h"
 #include "CollisionManager.h"
 enum class EventType
 {

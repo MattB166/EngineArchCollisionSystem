@@ -25,7 +25,7 @@ void Square::OnOtherObjectCollisionNotify(Collider* col, Collider* col1)
 {
 	if(col != collider && col1 != collider)
 	{
-		std::cout << "Detected Collision between two other game objects" << std::endl;
+		std::cout << "Square has Detected Collision between two other game objects" << std::endl;
 	}
 	GameObject::OnOtherObjectCollisionNotify(col, col1);
 }

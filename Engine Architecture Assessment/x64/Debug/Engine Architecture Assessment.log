@@ -1,7 +1,29 @@
-﻿  CollisionManager.cpp
+﻿  Circle.cpp
+C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\Circle.cpp(31,11): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\Circle.cpp(32,11): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\Circle.cpp(36,53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\Circle.cpp(36,41): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  CollisionManager.cpp
+C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\CollisionManager.cpp(91,13): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\CollisionManager.cpp(92,13): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
   EventManager.cpp
   Game.cpp
+  GameObject.cpp
+C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(48,33): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(48,33): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(48,48): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(48,48): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(48,51): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(48,51): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(48,57): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(48,57): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(140,10): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(141,10): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(158,29): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(158,22): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   Square.cpp
+  main.cpp
   Generating Code...
-CollisionManager.obj : error LNK2001: unresolved external symbol "public: static class std::queue<struct Event *,class std::deque<struct Event *,class std::allocator<struct Event *> > > EventManager<class Collider>::CollisionEventQueue" (?CollisionEventQueue@?$EventManager@VCollider@@@@2V?$queue@PEAUEvent@@V?$deque@PEAUEvent@@V?$allocator@PEAUEvent@@@std@@@std@@@std@@A)
-C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\x64\Debug\Engine Architecture Assessment.exe : fatal error LNK1120: 1 unresolved externals
+C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\main.cpp(14): warning C4715: 'Initialise': not all control paths return a value
+C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(89): warning C4715: 'GameObject::ObjectTypeToString': not all control paths return a value
+  Engine Architecture Assessment.vcxproj -> C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\x64\Debug\Engine Architecture Assessment.exe

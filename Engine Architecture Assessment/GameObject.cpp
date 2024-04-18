@@ -110,7 +110,7 @@ void GameObject::OnOtherObjectCollisionNotify(Collider* col, Collider* col1)
 {
 	///check how far away they are 
 	ChangeTexture();
-	std::cout << "Collision between other objects noted" << std::endl;	
+	//std::cout << "Collision between other objects noted" << std::endl;	
 }
 
 

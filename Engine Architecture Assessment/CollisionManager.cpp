@@ -46,6 +46,8 @@ bool CollisionManager::CircleCollision(CircleCollider* collider1, CircleCollider
 }
 
 
+
+
 bool CollisionManager::CircleRectCollision(CircleCollider* circ, BoxCollider* box)
 {
 	float circleX = *circ->x;
@@ -57,21 +59,39 @@ bool CollisionManager::CircleRectCollision(CircleCollider* circ, BoxCollider* bo
 	float boxWidth = *box->width;
 	float boxHeight = *box->height;
 
-	float testX = circleX;  //temp variables for checking which side of the box the circle is on. TestX is the side to test 
-	float testY = circleY;
+	float ClosestX;
+	float ClosestY;
 
-	if (circleX < boxX) testX = boxX;
-	else if (circleX > boxX + boxWidth) testX = boxX + boxWidth;
-	if (circleY < boxY) testY = boxY;
-	else if (circleY > boxY + boxHeight) testY = boxY + boxHeight;
-
-	float distX = circleX - testX;
-	float distY = circleY - testY;
-	float distance = sqrt((distX * distX) + (distY * distY));
-
-	if (distance <= radius)
+	if (circleX < boxX)
 	{
-		//std::cout << "Square/circ collision detected" << std::endl;
+		ClosestX = boxX;
+	}
+	else if (circleX > boxX + boxWidth)
+	{
+		ClosestX = boxX + boxWidth;
+	}
+	else
+	{
+		ClosestX = circleX;
+	}
+
+	if (circleY < boxY)
+	{
+		ClosestY = boxY;
+	}
+	else if (circleY > boxY + boxHeight)
+	{
+		ClosestY = boxY + boxHeight;
+	}
+	else
+	{
+		ClosestY = circleY;
+	}
+	
+	int deltaX = ClosestX - circleX;
+	int deltaY = ClosestY - circleY;
+	if ((deltaX * deltaX) + (deltaY * deltaY) < radius * radius)
+	{
 		return true;
 	}
 	return false;
@@ -174,6 +194,11 @@ void CollisionManager::AddCollider(Collider* collider)
 	
 	
 
+}
+
+void CollisionManager::RemoveCollider(Collider* collider)
+{
+	colliders.remove(collider);
 }
 
 void CollisionManager::CleanUp()

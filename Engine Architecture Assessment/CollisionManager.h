@@ -42,6 +42,10 @@ public:
 	/// @param collider 
 	static void AddCollider(Collider* collider);
 
+	/// @brief Removes a collider from the collision list.
+	/// @param collider 
+	static void RemoveCollider(Collider* collider);
+
 	/// @brief Cleans all the colliders from the list.
 	/// @return 
 	static void CleanUp(); 
