@@ -52,9 +52,9 @@ public:
 
 private:
 	CollisionManager();
-	//static CollisionManager* _instance;
+	/// @brief List of the Collision Manager's stored colliders
 	static std::list<Collider*> colliders;
-	static std::list<Collider*> inactiveColliders;
+
 	
 };
 

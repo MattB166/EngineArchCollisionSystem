@@ -1,10 +1,7 @@
 #include "CollisionManager.h"
 #include "EventManager.h"
 
-//CollisionManager* CollisionManager::_instance = nullptr;
 std::list<Collider*> CollisionManager::colliders;
-std::list<Collider*> CollisionManager::inactiveColliders;
-
 bool CollisionManager::SquareCollision(BoxCollider* collider1, BoxCollider* collider2)
 {
 

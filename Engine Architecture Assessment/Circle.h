@@ -1,6 +1,5 @@
 #pragma once
 #include "GameObject.h"
-#include "CircleCollider.h"
 struct Colour
 {
 	Uint8 r;

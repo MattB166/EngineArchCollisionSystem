@@ -1,6 +1,5 @@
 #pragma once
 #include "GameObject.h"
-#include "BoxCollider.h"
 class Square : public GameObject
 {
 public:
