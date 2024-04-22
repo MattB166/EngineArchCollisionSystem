@@ -1,8 +1,4 @@
 ﻿  CollisionManager.cpp
-C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\CollisionManager.cpp(89,13): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\CollisionManager.cpp(90,13): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-  EventManager.cpp
-  main.cpp
-  Generating Code...
-C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\main.cpp(14): warning C4715: 'Initialise': not all control paths return a value
-  Engine Architecture Assessment.vcxproj -> C:\Users\5BRAKM58\Downloads\EngineArchCollisionSystem\Engine Architecture Assessment\x64\Debug\Engine Architecture Assessment.exe
+C:\Users\Matth\Documents\YEAR 2\EngineArch\EngineArchCollisionSystem\Engine Architecture Assessment\CollisionManager.cpp(89,13): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Matth\Documents\YEAR 2\EngineArch\EngineArchCollisionSystem\Engine Architecture Assessment\CollisionManager.cpp(90,13): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  Engine Architecture Assessment.vcxproj -> C:\Users\Matth\Documents\YEAR 2\EngineArch\EngineArchCollisionSystem\Engine Architecture Assessment\x64\Debug\Engine Architecture Assessment.exe
