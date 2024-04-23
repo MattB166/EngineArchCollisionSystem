@@ -54,7 +54,7 @@ protected:
 	Vector2 pos;
 	Vector2 movePos;
 	int CollisionCount = 0;
-	float speed = 60;
+	float speed = 90;
 	float width = 40;
 	float height = 40;
 	float rotation = 0;

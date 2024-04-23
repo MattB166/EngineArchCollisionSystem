@@ -3,8 +3,6 @@ C:\Users\Matth\Documents\UNI WORK\Actual Year 2\Engine Architecture\EngineArchCo
 C:\Users\Matth\Documents\UNI WORK\Actual Year 2\Engine Architecture\EngineArchCollisionSystem\Engine Architecture Assessment\Circle.cpp(32,11): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
 C:\Users\Matth\Documents\UNI WORK\Actual Year 2\Engine Architecture\EngineArchCollisionSystem\Engine Architecture Assessment\Circle.cpp(36,53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
 C:\Users\Matth\Documents\UNI WORK\Actual Year 2\Engine Architecture\EngineArchCollisionSystem\Engine Architecture Assessment\Circle.cpp(36,41): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  CollisionManager.cpp
-  EventManager.cpp
   Game.cpp
   GameObject.cpp
 C:\Users\Matth\Documents\UNI WORK\Actual Year 2\Engine Architecture\EngineArchCollisionSystem\Engine Architecture Assessment\GameObject.cpp(48,33): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion

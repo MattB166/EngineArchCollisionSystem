@@ -54,7 +54,7 @@ private:
 	CollisionManager();
 	/// @brief List of the Collision Manager's stored colliders
 	static std::list<Collider*> colliders;
-
+	static float circleOffset;
 	
 };
 
